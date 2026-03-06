@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1200-TF — Sales Catalog</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b12;--sf:#13131c;--cd:#1a1a26;--bd:#252535;
+  --tx:#f0f0f8;--mu:#5a6080;--r:14px;
+  --mi:#3b82f6;--km:#22c55e;--sc:#f97316;
+  --gr:#22c55e;--or:#f97316;--re:#ef4444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Sarabun",sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+
+/* ── Loading ── */
+#loader{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:500;gap:16px}
+.spin{width:40px;height:40px;border:3px solid var(--bd);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loader p{font-size:.9rem;color:var(--mu)}
+
+/* ── Header ── */
+.hdr{background:var(--sf);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px #0008}
+.hdr-inner{max-width:1440px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-family:"Space Mono",monospace;font-size:1.15rem;color:#fff;letter-spacing:2px}
+.update-time{font-size:.72rem;color:var(--mu);margin-left:4px}
+.update-time b{color:#fff}
+.mode-btn{margin-left:auto;display:flex;align-items:center;gap:8px}
+.mode-badge{font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:50px;cursor:pointer;border:1.5px solid var(--bd);transition:all .2s;display:flex;align-items:center;gap:5px}
+.mode-badge.viewer{background:var(--cd);color:var(--mu)}
+.mode-badge.admin{background:var(--mi);color:#fff;border-color:var(--mi)}
+.search-wrap{max-width:1440px;margin:0 auto;padding:6px 20px 12px}
+.search-wrap input{width:100%;padding:10px 18px;border-radius:50px;border:1.5px solid var(--bd);background:var(--cd);color:var(--tx);font-family:"Sarabun",sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
+.search-wrap input:focus{border-color:var(--mi)}
+.search-wrap input::placeholder{color:var(--mu)}
+
+/* ── Tabs ── */
+.tabs-bar{background:var(--sf);border-bottom:1px solid var(--bd);overflow-x:auto;scrollbar-width:none}
+.tabs-bar::-webkit-scrollbar{display:none}
+.tabs-inner{max-width:1440px;margin:auto;padding:0 20px;display:flex;gap:0}
+.tab-btn{padding:12px 22px;font-family:"Sarabun",sans-serif;font-size:.9rem;font-weight:600;border:none;background:none;color:var(--mu);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:var(--tx)}
+.tab-btn.active{color:var(--tx);border-bottom-color:var(--tab-color,#fff)}
+.tab-btn .cnt{font-size:.72rem;background:var(--cd);padding:2px 8px;border-radius:50px;border:1px solid var(--bd)}
+.tab-btn.active .cnt{background:var(--tab-color,#fff);color:#000;border-color:transparent}
+
+/* ── Category nav ── */
+.cat-nav{max-width:1440px;margin:0 auto;padding:10px 20px;overflow-x:auto;display:flex;gap:8px;scrollbar-width:none}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-pill{padding:5px 14px;border-radius:50px;background:var(--cd);border:1.5px solid var(--bd);color:var(--tx);font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.cat-pill:hover,.cat-pill.active{background:var(--tab-ac);color:#000;border-color:var(--tab-ac)}
+
+/* ── Main grid ── */
+.main{max-width:1440px;margin:0 auto;padding:20px 20px 80px}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.cat-sec{margin-bottom:48px}
+.cat-title{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--bd)}
+.cat-title-cnt{margin-left:auto;font-size:.75rem;font-weight:400;color:var(--mu);background:var(--cd);padding:3px 10px;border-radius:50px;border:1px solid var(--bd)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:16px}
+.card{background:var(--cd);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 36px #0007;border-color:var(--tab-ac)}
+.card.hidden{display:none}
+.card-img{height:175px;background:var(--sf);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;display:block}
+.card:hover .card-img img{transform:scale(1.07)}
+.no-img{color:var(--mu);text-align:center;font-size:1.8rem;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.card-body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px}
+.card-sku{font-family:"Space Mono",monospace;font-size:.72rem;color:var(--tab-ac);word-break:break-all;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.src-badge{font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:3px}
+.src-mi{background:#3b82f618;color:var(--mi);border:1px solid #3b82f630}
+.src-km{background:#22c55e18;color:var(--km);border:1px solid #22c55e30}
+/* stock: viewer dot / admin full */
+.stock-wrap{display:flex;align-items:center;gap:7px;min-height:22px}
+.dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot-ok {background:var(--gr);box-shadow:0 0 6px #22c55e80}
+.dot-low{background:var(--or);box-shadow:0 0 6px #f9731680}
+.dot-zero{background:var(--re);box-shadow:0 0 6px #ef444480}
+.stock-label{font-size:.78rem;font-weight:600;padding:3px 9px;border-radius:50px;display:none}
+body.admin-mode .stock-label{display:inline-flex;align-items:center}
+.sk-ok {background:#22c55e18;color:var(--gr)}
+.sk-low{background:#f9731618;color:var(--or)}
+.copy-btn{padding:7px;background:transparent;border:1.5px solid var(--bd);border-radius:8px;color:var(--tx);font-family:"Sarabun",sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;width:100%;margin-top:2px}
+.copy-btn:hover{background:var(--tab-ac);color:#000;border-color:var(--tab-ac)}
+.empty-msg{text-align:center;padding:70px 20px;color:var(--mu)}
+
+/* ── Report section ── */
+.report-wrap{margin-top:48px;display:none}
+body.admin-mode .report-wrap{display:block}
+.rpt-toggle{background:var(--cd);border:1px solid var(--bd);border-radius:var(--r);padding:12px 18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:2px;transition:border-color .2s}
+.rpt-toggle:hover{border-color:var(--tab-ac)}
+.rpt-toggle h3{font-size:.9rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.rpt-cnt{font-size:.78rem;font-weight:400;color:var(--mu)}
+.rpt-body{background:var(--cd);border:1px solid var(--bd);border-top:none;border-radius:0 0 var(--r) var(--r);display:none}
+.rpt-body.open{display:block}
+.rpt-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.rpt-table th{background:#ffffff07;padding:7px 12px;text-align:left;font-weight:700;color:var(--mu);border-bottom:1px solid var(--bd)}
+.rpt-table td{padding:7px 12px;border-bottom:1px solid var(--bd);font-family:"Space Mono",monospace;font-size:.7rem}
+.rpt-table tr:last-child td{border-bottom:none}
+.rpt-table tr:hover td{background:#ffffff04}
+.rpt-empty{padding:16px;text-align:center;color:var(--mu);font-size:.82rem}
+
+/* ── PIN modal ── */
+.pin-overlay{position:fixed;inset:0;background:#000c;backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center}
+.pin-overlay.show{display:flex}
+.pin-box{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:30px 26px;width:310px;text-align:center}
+.pin-box h2{font-size:1rem;margin-bottom:4px}
+.pin-box p{font-size:.78rem;color:var(--mu);margin-bottom:18px}
+.pin-dots{display:flex;gap:10px;justify-content:center;margin-bottom:16px}
+.pin-dot{width:13px;height:13px;border-radius:50%;background:var(--bd);transition:background .15s}
+.pin-dot.filled{background:var(--mi)}
+.pin-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pk{padding:13px;background:var(--cd);border:1.5px solid var(--bd);border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:all .15s;color:var(--tx);font-family:"Space Mono",monospace}
+.pk:hover{background:var(--mi);color:#fff;border-color:var(--mi)}
+.pk.del{font-size:.8rem;color:var(--mu)}
+.pin-err{color:#f87171;font-size:.78rem;height:16px;margin-bottom:6px}
+
+/* ── Toast ── */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--mi);color:#fff;padding:11px 20px;border-radius:10px;font-weight:600;font-size:.85rem;box-shadow:0 8px 30px #0007;transform:translateY(60px);opacity:0;transition:all .3s cubic-bezier(.175,.885,.32,1.275);z-index:9999;pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* responsive */
+@media(max-width:600px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card-img{height:145px}
+  .main{padding:14px 12px 60px}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="spin"></div>
+  <p>กำลังโหลดข้อมูลสินค้า...</p>
+</div>
+
+<!-- PIN Modal -->
+<div class="pin-overlay" id="pinModal">
+  <div class="pin-box">
+    <h2>🔐 Admin Mode</h2>
+    <p>กรอกรหัส 4 หลักเพื่อดูจำนวน Stock</p>
+    <div class="pin-dots">
+      <div class="pin-dot" id="pd0"></div>
+      <div class="pin-dot" id="pd1"></div>
+      <div class="pin-dot" id="pd2"></div>
+      <div class="pin-dot" id="pd3"></div>
+    </div>
+    <div class="pin-err" id="pinErr"></div>
+    <div class="pin-keys">
+      <button class="pk" onclick="pk('1')">1</button>
+      <button class="pk" onclick="pk('2')">2</button>
+      <button class="pk" onclick="pk('3')">3</button>
+      <button class="pk" onclick="pk('4')">4</button>
+      <button class="pk" onclick="pk('5')">5</button>
+      <button class="pk" onclick="pk('6')">6</button>
+      <button class="pk" onclick="pk('7')">7</button>
+      <button class="pk" onclick="pk('8')">8</button>
+      <button class="pk" onclick="pk('9')">9</button>
+      <button class="pk del" onclick="pk('C')">✕</button>
+      <button class="pk" onclick="pk('0')">0</button>
+      <button class="pk del" onclick="pk('DEL')">⌫</button>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="logo">1200-TF</div>
+    <div class="update-time">อัปเดต: <b id="updatedAt">—</b></div>
+    <div class="mode-btn">
+      <button class="mode-badge viewer" id="modeBadge" onclick="togglePin()">👁 Viewer</button>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <input id="searchInput" type="search" placeholder="🔍 ค้นหา SKU ..." oninput="doSearch(this.value)">
+  </div>
+</header>
+
+<!-- Tabs -->
+<div class="tabs-bar">
+  <div class="tabs-inner">
+    <button class="tab-btn active" id="tab-mi"    onclick="switchTab('mi')"    style="--tab-color:var(--mi)">🔵 MI    <span class="cnt" id="cnt-mi">—</span></button>
+    <button class="tab-btn"        id="tab-km"    onclick="switchTab('km')"    style="--tab-color:var(--km)">🟢 KM    <span class="cnt" id="cnt-km">—</span></button>
+    <button class="tab-btn"        id="tab-scrap" onclick="switchTab('scrap')" style="--tab-color:var(--sc)">🟠 งานลังเศษ <span class="cnt" id="cnt-scrap">—</span></button>
+  </div>
+</div>
+
+<!-- Category nav -->
+<div class="cat-nav" id="catNav"></div>
+
+<!-- Main content -->
+<main class="main">
+  <div class="tab-panel active" id="panel-mi"></div>
+  <div class="tab-panel"        id="panel-km"></div>
+  <div class="tab-panel"        id="panel-scrap"></div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────
+var PIN    = "1200";       // ← เปลี่ยน PIN ที่นี่
+var DATA_URL = "data/catalog.json";   // relative path ใน repo
+
+var TABS = {
+  mi:    { ac:"#3b82f6", label:"MI" },
+  km:    { ac:"#22c55e", label:"KM" },
+  scrap: { ac:"#f97316", label:"งานลังเศษ" },
+};
+var LOW_QTY = 5;
+
+// ── State ─────────────────────────────────────────────────────
+var catalog  = null;
+var curTab   = "mi";
+var isAdmin  = false;
+var pinBuf   = "";
+
+// ── Load data ─────────────────────────────────────────────────
+fetch(DATA_URL + "?t=" + Date.now())
+  .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  .then(function(data){
+    catalog = data;
+    document.getElementById("updatedAt").textContent = data.updated || "—";
+    document.getElementById("cnt-mi").textContent    = (data.MI    && data.MI.items)    ? data.MI.items.length    : 0;
+    document.getElementById("cnt-km").textContent    = (data.KM    && data.KM.items)    ? data.KM.items.length    : 0;
+    document.getElementById("cnt-scrap").textContent = (data.scrap && data.scrap.items) ? data.scrap.items.length : 0;
+    renderTab("mi");
+    document.getElementById("loader").style.display = "none";
+  })
+  .catch(function(e){
+    document.getElementById("loader").innerHTML = "<p style='color:#f87171'>โหลดข้อมูลไม่สำเร็จ<br><small>"+e.message+"</small></p>";
+  });
+
+// ── Render tab ────────────────────────────────────────────────
+function renderTab(tab) {
+  curTab = tab;
+  var ac  = TABS[tab].ac;
+  document.documentElement.style.setProperty("--tab-ac", ac);
+
+  // Tab buttons
+  Object.keys(TABS).forEach(function(t){
+    var btn = document.getElementById("tab-"+t);
+    btn.classList.toggle("active", t===tab);
+  });
+
+  // Panels
+  ["mi","km","scrap"].forEach(function(t){
+    document.getElementById("panel-"+t).classList.toggle("active", t===tab);
+  });
+
+  var key  = tab === "scrap" ? "scrap" : tab.toUpperCase();
+  var data = catalog && catalog[key];
+  if (!data || !data.items || data.items.length === 0) {
+    document.getElementById("panel-"+tab).innerHTML = "<div class='empty-msg'>ไม่มีข้อมูลสินค้า</div>";
+    document.getElementById("catNav").innerHTML = "";
+    return;
+  }
+
+  // Group by category (already sorted by SKU from Apps Script)
+  var cats = {};
+  data.items.forEach(function(item){
+    if (!cats[item.category]) cats[item.category] = [];
+    cats[item.category].push(item);
+  });
+  var catKeys = Object.keys(cats).sort();
+
+  // Category nav pills
+  var nav = '<div class="cat-pill active" onclick="scrollCat(\'all\')">ทั้งหมด</div>';
+  catKeys.forEach(function(cat){
+    var sid = cat.replace(/[^a-zA-Z0-9\u0E00-\u0E7F]/g,"_");
+    nav += '<div class="cat-pill" onclick="scrollCat(\'c_'+tab+'_'+sid+'\')">'+cat+' <small>('+cats[cat].length+')</small></div>';
+  });
+  document.getElementById("catNav").innerHTML = nav;
+
+  // Cards
+  var html = "";
+  catKeys.forEach(function(cat){
+    var sid = cat.replace(/[^a-zA-Z0-9\u0E00-\u0E7F]/g,"_");
+    html += '<section class="cat-sec" id="c_'+tab+'_'+sid+'">';
+    html += '<h2 class="cat-title">📦 '+cat+'<span class="cat-title-cnt">'+cats[cat].length+' รายการ</span></h2>';
+    html += '<div class="grid">';
+    cats[cat].forEach(function(item){
+      var imgUrl = item.imgId ? "https://lh3.googleusercontent.com/d/"+item.imgId+"=w400" : "";
+      var imgTag = imgUrl
+        ? '<img src="'+imgUrl+'" alt="'+item.sku+'" loading="lazy" onerror="this.style.display=\'none\'">'
+        : '<div class="no-img">📷</div>';
+      var low  = item.stock > 0 && item.stock <= LOW_QTY;
+      var zero = item.stock <= 0;
+      var dotCls   = zero ? "dot-zero" : (low ? "dot-low" : "dot-ok");
+      var dotTitle = zero ? "หมด" : (low ? "เหลือน้อย" : "มีสินค้า");
+      var skCls    = low ? "sk-low" : "sk-ok";
+      var skLabel  = low ? "⚠️ "+item.stock+" ชิ้น" : "✅ "+item.stock+" ชิ้น";
+      var srcBadge = item.source ? '<span class="src-badge src-'+item.source.toLowerCase()+'">'+item.source+'</span>' : "";
+      var tabs     = item.tabs && item.tabs.length > 1 ? '<span style="font-size:.6rem;color:var(--mu)">×'+item.tabs.length+'</span>' : "";
+      var sku_safe = item.sku.replace(/'/g,"\\'");
+
+      html +=
+        '<div class="card" data-sku="'+item.sku+'" data-cat="'+item.category+'">' +
+          '<div class="card-img">'+imgTag+'</div>' +
+          '<div class="card-body">' +
+            '<div class="card-sku">'+item.sku+' '+srcBadge+tabs+'</div>' +
+            '<div class="stock-wrap">' +
+              '<span class="dot '+dotCls+'" title="'+dotTitle+'"></span>' +
+              '<span class="stock-label '+skCls+'">'+skLabel+'</span>' +
+            '</div>' +
+            '<button class="copy-btn" onclick="copySku(\''+sku_safe+'\')">📋 คัดลอก SKU</button>' +
+          '</div>' +
+        '</div>';
+    });
+    html += '</div></section>';
+  });
+
+  // Report section (admin only)
+  if (data.outOfStock || data.noImage) {
+    html += buildReport(data);
+  }
+
+  document.getElementById("panel-"+tab).innerHTML = html;
+}
+
+function buildReport(data) {
+  var oos = data.outOfStock || [];
+  var nim = data.noImage    || [];
+  var h = '<div class="report-wrap">';
+  h += '<div style="font-size:1rem;font-weight:700;margin-bottom:12px">📋 รายงานสถานะสินค้า</div>';
+
+  // out of stock
+  h += '<div class="rpt-toggle" onclick="tgl(\'oos\')"><h3>❌ สินค้าหมด Stock <span class="rpt-cnt">'+oos.length+' รายการ</span></h3><span id="oos-arr">▼</span></div>';
+  h += '<div class="rpt-body" id="oos">';
+  if (oos.length === 0) {
+    h += '<div class="rpt-empty">✅ ไม่มีสินค้าหมด</div>';
+  } else {
+    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>Tab</th><th>Stock</th></tr></thead><tbody>';
+    oos.forEach(function(i){ h += '<tr><td>'+i.sku+'</td><td style="font-family:Sarabun,sans-serif">'+i.tab+'</td><td>'+i.stock+'</td></tr>'; });
+    h += '</tbody></table>';
+  }
+  h += '</div>';
+
+  // no image
+  h += '<div class="rpt-toggle" style="margin-top:8px" onclick="tgl(\'nim\')"><h3>📷 มี Stock แต่ไม่มีรูป <span class="rpt-cnt">'+nim.length+' รายการ</span></h3><span id="nim-arr">▼</span></div>';
+  h += '<div class="rpt-body" id="nim">';
+  if (nim.length === 0) {
+    h += '<div class="rpt-empty">✅ ทุกรายการมีรูปครบ</div>';
+  } else {
+    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>Tab</th><th>Stock</th></tr></thead><tbody>';
+    nim.forEach(function(i){ h += '<tr><td>'+i.sku+'</td><td style="font-family:Sarabun,sans-serif">'+i.tab+'</td><td>'+i.stock+'</td></tr>'; });
+    h += '</tbody></table>';
+  }
+  h += '</div></div>';
+  return h;
+}
+
+function switchTab(tab) {
+  renderTab(tab);
+  document.getElementById("searchInput").value = "";
+}
+
+// ── Search ────────────────────────────────────────────────────
+function doSearch(q) {
+  q = q.trim().toLowerCase();
+  var panel = document.getElementById("panel-"+curTab);
+  var n = 0;
+  panel.querySelectorAll(".card").forEach(function(c){
+    var ok = !q || c.dataset.sku.toLowerCase().includes(q) || c.dataset.cat.toLowerCase().includes(q);
+    c.classList.toggle("hidden", !ok);
+    if (ok) n++;
+  });
+  panel.querySelectorAll(".cat-sec").forEach(function(s){
+    var vis = [].some.call(s.querySelectorAll(".card"), function(c){ return !c.classList.contains("hidden"); });
+    s.style.display = vis ? "" : "none";
+  });
+}
+
+// ── Scroll to category ────────────────────────────────────────
+function scrollCat(id) {
+  if (id === "all") { window.scrollTo({top:0, behavior:"smooth"}); return; }
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+// ── Copy SKU ──────────────────────────────────────────────────
+function copySku(sku) {
+  navigator.clipboard.writeText(sku).then(function(){ showToast("คัดลอก "+sku+" แล้ว! ✅"); });
+}
+
+// ── PIN ───────────────────────────────────────────────────────
+function togglePin() {
+  if (isAdmin) { exitAdmin(); return; }
+  pinBuf = "";
+  renderDots();
+  document.getElementById("pinModal").classList.add("show");
+}
+function pk(k) {
+  var err = document.getElementById("pinErr");
+  err.textContent = "";
+  if (k==="C")   { pinBuf=""; renderDots(); return; }
+  if (k==="DEL") { pinBuf=pinBuf.slice(0,-1); renderDots(); return; }
+  if (pinBuf.length >= 4) return;
+  pinBuf += k; renderDots();
+  if (pinBuf.length === 4) {
+    if (pinBuf === PIN) {
+      isAdmin = true;
+      document.getElementById("pinModal").classList.remove("show");
+      document.body.classList.add("admin-mode");
+      var mb = document.getElementById("modeBadge");
+      mb.textContent = "🔑 Admin"; mb.className = "mode-badge admin";
+      showToast("✅ Admin Mode — เห็นจำนวน Stock ทั้งหมด");
+    } else {
+      err.textContent = "รหัสไม่ถูกต้อง";
+      pinBuf = ""; renderDots();
+    }
+  }
+}
+function renderDots() {
+  for (var i=0;i<4;i++) document.getElementById("pd"+i).className = "pin-dot"+(i<pinBuf.length?" filled":"");
+}
+function exitAdmin() {
+  isAdmin = false;
+  document.body.classList.remove("admin-mode");
+  var mb = document.getElementById("modeBadge");
+  mb.textContent = "👁 Viewer"; mb.className = "mode-badge viewer";
+  showToast("🔒 กลับสู่ Viewer Mode");
+}
+document.getElementById("pinModal").addEventListener("click",function(e){
+  if (e.target===this){ this.classList.remove("show"); pinBuf=""; renderDots(); }
+});
+
+// ── Report toggle ──────────────────────────────────────────────
+function tgl(id) {
+  var b = document.getElementById(id), a = document.getElementById(id+"-arr");
+  if (b && a) a.textContent = b.classList.toggle("open") ? "▲" : "▼";
+}
+
+// ── Toast ─────────────────────────────────────────────────────
+function showToast(m) {
+  var t = document.getElementById("toast");
+  t.textContent = m; t.classList.add("show");
+  setTimeout(function(){ t.classList.remove("show"); }, 2500);
+}
+</script>
+</body>
+</html>
