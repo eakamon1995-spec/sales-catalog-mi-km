@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📦 Sales Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f3ef;
+  --white:#ffffff;
+  --border:#e4e0d8;
+  --text:#1c1a16;
+  --muted:#8c8880;
+  --mi:#1a56db;
+  --km:#057a55;
+  --scrap:#b45309;
+  --r:10px;
+  --font:'Sarabun',sans-serif;
+  --mono:'Chakra Petch',sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+
+/* ══ PIN ═══════════════════════════════════════════ */
+#pin-screen{
+  position:fixed;inset:0;z-index:999;
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+}
+.pin-box{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:16px;padding:36px 28px;
+  width:100%;max-width:340px;text-align:center;
+  box-shadow:0 4px 24px rgba(0,0,0,.08);
+}
+.pin-logo{font-family:var(--mono);font-size:1.2rem;letter-spacing:2px;margin-bottom:4px}
+.pin-sub{font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.pin-dots{display:flex;justify-content:center;gap:10px;margin-bottom:20px}
+.dot{
+  width:13px;height:13px;border-radius:50%;
+  border:2px solid var(--border);transition:.15s
+}
+.dot.on{background:var(--text);border-color:var(--text)}
+.dot.err{background:#ef4444;border-color:#ef4444}
+.numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.nk{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;padding:15px;font-family:var(--mono);
+  font-size:1.1rem;font-weight:600;cursor:pointer;
+  transition:.1s;-webkit-tap-highlight-color:transparent
+}
+.nk:active{background:var(--text);color:var(--white);transform:scale(.95)}
+.skip-btn{
+  font-size:.78rem;color:var(--muted);background:none;
+  border:none;cursor:pointer;text-decoration:underline;margin-top:12px
+}
+.skip-btn:hover{color:var(--text)}
+
+/* ══ HEADER ════════════════════════════════════════ */
+header{
+  background:var(--white);border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;
+}
+.htop{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px 8px;
+}
+.logo{font-family:var(--mono);font-size:1rem;letter-spacing:1px}
+.upd{font-size:.7rem;color:var(--muted)}
+
+/* tabs */
+.tabs{display:flex;border-top:1px solid var(--border)}
+.tbtn{
+  flex:1;padding:10px 4px;font-family:var(--font);font-size:.8rem;font-weight:600;
+  background:none;border:none;border-bottom:3px solid transparent;
+  cursor:pointer;color:var(--muted);transition:.2s;
+  display:flex;align-items:center;justify-content:center;gap:4px;
+}
+.tbtn.act-mi   {color:var(--mi);   border-bottom-color:var(--mi)}
+.tbtn.act-km   {color:var(--km);   border-bottom-color:var(--km)}
+.tbtn.act-scrap{color:var(--scrap);border-bottom-color:var(--scrap)}
+.cnt{
+  background:currentColor;color:#fff;
+  border-radius:10px;padding:1px 6px;font-size:.68rem;opacity:.85;
+}
+
+/* ══ TOOLBAR ═══════════════════════════════════════ */
+.toolbar{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:8px 14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+}
+.srch{
+  flex:1;min-width:180px;position:relative;
+}
+.srch input{
+  width:100%;background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;padding:8px 10px 8px 30px;font-family:var(--font);
+  font-size:.83rem;color:var(--text);outline:none;transition:.2s;
+}
+.srch input:focus{border-color:var(--text)}
+.srch-ico{position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:.82rem;pointer-events:none}
+.fsel{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;padding:8px 10px;font-family:var(--font);
+  font-size:.8rem;color:var(--text);outline:none;cursor:pointer;
+}
+.stk-toggle{
+  display:flex;align-items:center;gap:5px;font-size:.76rem;color:var(--muted);
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;padding:8px 10px;cursor:pointer;user-select:none;white-space:nowrap;
+}
+.stk-toggle input{cursor:pointer}
+
+/* ══ GRID ══════════════════════════════════════════ */
+main{padding:12px 12px 60px;max-width:1400px;margin:0 auto}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:10px;
+}
+@media(max-width:400px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+@media(min-width:700px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px}
+  main{padding:14px 20px 60px}
+}
+
+/* ══ CARD ══════════════════════════════════════════ */
+.card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;cursor:pointer;
+  transition:transform .18s,box-shadow .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.1)}
+.card.gone{display:none}
+.card.oos{opacity:.5}
+
+/* accent top stripe per tab */
+.card.cmi   {border-top:3px solid var(--mi)}
+.card.ckm   {border-top:3px solid var(--km)}
+.card.cscrap{border-top:3px solid var(--scrap)}
+
+/* image area */
+.cimg{
+  position:relative;aspect-ratio:1;
+  background:var(--bg);overflow:hidden;
+}
+.cimg img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .3s;display:block;
+}
+.card:hover .cimg img{transform:scale(1.05)}
+.noimg{
+  width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--muted);gap:4px;
+}
+.noimg small{font-size:.66rem}
+
+/* stock badge */
+.s-ok   { background:#d1fae5; color:#065f46; }
+.s-mid  { background:#fef3c7; color:#78350f; }
+.s-low  { background:#fee2e2; color:#991b1b; }
+.s-out  { background:#f0f0f0; color:#999; }
+/* viewer mode icons */
+.s-vw-ok  { background:#d1fae5; color:#16a34a; font-size:1.3rem; line-height:1; padding:4px 8px; }
+.s-vw-out { background:#fee2e2; color:#dc2626; font-size:1.3rem; line-height:1; padding:4px 8px; }
+.spill{
+  position:absolute;bottom:6px;left:6px;
+  border-radius:5px;padding:2px 7px;
+  font-size:.67rem;font-weight:600;
+  backdrop-filter:blur(4px);
+}
+.s-ok  {background:rgba(207,250,230,.9);color:#065f46}
+.s-mid {background:rgba(254,243,199,.9);color:#78350f}
+.s-low {background:rgba(254,226,226,.9);color:#991b1b}
+.s-out {background:rgba(240,240,240,.9);color:#666}
+.s-pin {background:rgba(0,0,0,.55);color:#fff;letter-spacing:2px}
+
+/* card body */
+.cbody{padding:8px 10px 10px}
+.csku {font-family:var(--mono);font-size:.63rem;color:var(--muted);margin-bottom:3px}
+.cname{font-size:.79rem;font-weight:500;line-height:1.3;color:var(--text);margin-bottom:6px}
+.cfoot{display:flex;align-items:center;justify-content:space-between}
+.cprice{font-family:var(--mono);font-size:.9rem;font-weight:700}
+.ccat{font-size:.6rem;background:var(--bg);border:1px solid var(--border);
+  border-radius:4px;padding:1px 5px;color:var(--muted)}
+
+/* ══ LIGHTBOX ══════════════════════════════════════ */
+#lb{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.8);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;padding:16px;
+}
+#lb.on{display:flex}
+.lbbox{
+  background:var(--white);border-radius:14px;overflow:hidden;
+  max-width:460px;width:100%;
+  box-shadow:0 24px 64px rgba(0,0,0,.35);
+}
+.lbimg{width:100%;aspect-ratio:1;object-fit:contain;background:var(--bg);display:block}
+.lbinfo{padding:14px 16px 18px}
+.lbsku{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-bottom:3px}
+.lbname{font-size:.98rem;font-weight:600;margin-bottom:10px}
+.lbrow{display:flex;align-items:center;justify-content:space-between}
+.lbprice{font-family:var(--mono);font-size:1.15rem;font-weight:700}
+.lbchip{font-size:.76rem;border-radius:6px;padding:4px 10px;font-weight:600}
+.lbclose{
+  position:absolute;top:14px;right:14px;
+  background:rgba(255,255,255,.18);border:none;color:#fff;
+  font-size:1.1rem;border-radius:50%;width:34px;height:34px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+
+/* ══ STATES ════════════════════════════════════════ */
+.loading,.empty-msg{
+  text-align:center;padding:80px 20px;color:var(--muted);display:none;
+}
+.loading.on,.empty-msg.on{display:block}
+.spinner{
+  width:34px;height:34px;border:3px solid var(--border);
+  border-top-color:var(--text);border-radius:50%;
+  animation:spin .7s linear infinite;margin:0 auto 14px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<!-- PIN -->
+<div id="pin-screen">
+  <div class="pin-box">
+    <div class="pin-logo">📦 SALES CATALOG</div>
+    <p class="pin-sub">กรอก PIN เพื่อดูจำนวน Stock</p>
+    <div class="pin-dots">
+      <div class="dot" id="d0"></div><div class="dot" id="d1"></div>
+      <div class="dot" id="d2"></div><div class="dot" id="d3"></div>
+    </div>
+    <div class="numpad">
+      <button class="nk" onclick="pk('1')">1</button>
+      <button class="nk" onclick="pk('2')">2</button>
+      <button class="nk" onclick="pk('3')">3</button>
+      <button class="nk" onclick="pk('4')">4</button>
+      <button class="nk" onclick="pk('5')">5</button>
+      <button class="nk" onclick="pk('6')">6</button>
+      <button class="nk" onclick="pk('7')">7</button>
+      <button class="nk" onclick="pk('8')">8</button>
+      <button class="nk" onclick="pk('9')">9</button>
+      <button class="nk" onclick="pk('←')">←</button>
+      <button class="nk" onclick="pk('0')">0</button>
+      <button class="nk" onclick="pk('←')" style="opacity:.35">⌫</button>
+    </div>
+    <button class="skip-btn" onclick="skipPin()">ข้าม (ไม่แสดง Stock)</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lb" onclick="lbClick(event)">
+  <button class="lbclose" onclick="closeLB()">✕</button>
+  <div class="lbbox">
+    <img class="lbimg" id="lb-img" src="" alt="">
+    <div class="lbinfo">
+      <div class="lbsku"  id="lb-sku"></div>
+      <div class="lbname" id="lb-name"></div>
+      <div class="lbrow">
+        <div class="lbprice" id="lb-price"></div>
+        <div class="lbchip"  id="lb-chip"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="htop">
+    <div class="logo">📦 Sales Catalog</div>
+    <div class="upd" id="upd-lbl">กำลังโหลด...</div>
+  </div>
+  <div class="tabs">
+    <button class="tbtn act-mi" id="tbtn-MI"    onclick="swTab('MI')">
+      🔵 MI <span class="cnt" id="cnt-MI">–</span>
+    </button>
+    <button class="tbtn" id="tbtn-KM"    onclick="swTab('KM')">
+      🟢 KM <span class="cnt" id="cnt-KM">–</span>
+    </button>
+    <button class="tbtn" id="tbtn-SCRAP" onclick="swTab('SCRAP')">
+      🟠 งานลังเศษ <span class="cnt" id="cnt-SCRAP">–</span>
+    </button>
+  </div>
+</header>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="srch">
+    <span class="srch-ico">🔍</span>
+    <input id="srch-inp" type="text" placeholder="ค้นหา SKU หรือชื่อสินค้า..."
+      oninput="applyFilter()">
+  </div>
+  <select class="fsel" id="cat-sel" onchange="applyFilter()">
+    <option value="">ทุกหมวด</option>
+  </select>
+  <label class="stk-toggle">
+    <input type="checkbox" id="instock-chk" onchange="applyFilter()"> มีของเท่านั้น
+  </label>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="loading on" id="loader"><div class="spinner"></div><p>กำลังโหลดข้อมูล...</p></div>
+  <div class="grid"      id="grid"></div>
+  <div class="empty-msg" id="empty">ไม่พบสินค้าที่ค้นหา 🔍</div>
+</main>
+
+<script>
+// ══ CONFIG ═══════════════════════════════════════════════
+var PIN         = "3112";           // ← เปลี่ยน PIN ที่นี่
+var GH_USER     = "eakamon1995-spec";  // ← GitHub username
+var GH_REPO     = "sales-catalog-mi-km";  // ← ชื่อ repo
+var SCRAP_KEY   = "ลงข้อมูล WIP-S26"; // ← ต้องตรงกับ SHEET_SCRAP ใน Code_v7.gs
+
+var JSON_URL = "https://raw.githubusercontent.com/" + GH_USER + "/" + GH_REPO + "/main/data/catalog.json";
+
+// ══ STATE ════════════════════════════════════════════════
+var S = {
+  pinOK: false,
+  tab:   'MI',      // 'MI' | 'KM' | 'SCRAP'
+  data:  {},
+  pin:   '',
+};
+
+// key map: UI tab key → JSON data key
+function dataKey(tab) {
+  if (tab === 'MI')    return 'MI';
+  if (tab === 'KM')    return 'KM';
+  return SCRAP_KEY;
+}
+
+// ══ PIN ══════════════════════════════════════════════════
+function pk(v) {
+  if (v === '←') { S.pin = S.pin.slice(0,-1); }
+  else if (S.pin.length < 4) { S.pin += v; }
+  updateDots(false);
+  if (S.pin.length === 4) checkPin();
+}
+function updateDots(err) {
+  for (var i=0;i<4;i++){
+    var d=document.getElementById('d'+i);
+    d.className='dot'+(i<S.pin.length?' on':'')+(err?' err':'');
+  }
+}
+function checkPin() {
+  if (S.pin === PIN) {
+    S.pinOK = true;
+    document.getElementById('pin-screen').style.display='none';
+    applyFilter();
+  } else {
+    updateDots(true);
+    setTimeout(function(){ S.pin=''; updateDots(false); }, 600);
+  }
+}
+function skipPin() {
+  S.pinOK = false;
+  document.getElementById('pin-screen').style.display='none';
+  applyFilter();
+}
+
+// ══ LOAD DATA ════════════════════════════════════════════
+fetch(JSON_URL + '?_=' + Date.now())
+  .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(json) {
+    S.data = json;
+    document.getElementById('loader').classList.remove('on');
+
+    if (json.updatedAt) {
+      var d = new Date(json.updatedAt);
+      document.getElementById('upd-lbl').textContent =
+        'อัพเดท ' + d.toLocaleDateString('th-TH',{day:'numeric',month:'short',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+    }
+
+    // tab counts (เฉพาะมีของ)
+    function cnt(key){ return (json[key]||[]).filter(function(i){return i.inStock;}).length; }
+    document.getElementById('cnt-MI').textContent    = cnt('MI');
+    document.getElementById('cnt-KM').textContent    = cnt('KM');
+    document.getElementById('cnt-SCRAP').textContent = cnt(SCRAP_KEY);
+
+    buildCatFilter();
+    // ถ้า pin overlay ยังปิดอยู่ (user ยัง pin อยู่ ไม่ต้อง render)
+    if (document.getElementById('pin-screen').style.display === 'none') applyFilter();
+  })
+  .catch(function(){
+    document.getElementById('loader').innerHTML =
+      '<p style="color:#ef4444">⚠️ โหลดข้อมูลไม่ได้<br><small>กรุณา Sync จาก Google Sheet ก่อน</small></p>';
+  });
+
+// ══ TAB ══════════════════════════════════════════════════
+function swTab(tab) {
+  S.tab = tab;
+  document.querySelectorAll('.tbtn').forEach(function(b){ b.className='tbtn'; });
+  var cls = tab==='MI'?'act-mi':tab==='KM'?'act-km':'act-scrap';
+  document.getElementById('tbtn-'+tab).classList.add(cls);
+  buildCatFilter();
+  applyFilter();
+}
+
+function buildCatFilter() {
+  var items = (S.data[dataKey(S.tab)] || []);
+  var cats  = Array.from(new Set(items.map(function(i){return i.category;}))).sort();
+  var sel   = document.getElementById('cat-sel');
+  sel.innerHTML = '<option value="">ทุกหมวด</option>';
+  cats.forEach(function(c){
+    var o=document.createElement('option'); o.value=c; o.textContent=c; sel.appendChild(o);
+  });
+}
+
+// ══ FILTER + RENDER ══════════════════════════════════════
+function applyFilter() {
+  var items   = S.data[dataKey(S.tab)] || [];
+  var q       = document.getElementById('srch-inp').value.toLowerCase().trim();
+  var cat     = document.getElementById('cat-sel').value;
+  var onlyIn  = document.getElementById('instock-chk').checked;
+
+  var filtered = items.filter(function(item) {
+    if (onlyIn && !item.inStock) return false;
+    if (cat && item.category !== cat) return false;
+    if (q && item.sku.toLowerCase().indexOf(q)<0 && item.name.toLowerCase().indexOf(q)<0) return false;
+    return true;
+  });
+
+  // ── เรียงตาม SKU ──────────────────────────────────────────
+  filtered.sort(function(a,b){ return String(a.sku).localeCompare(String(b.sku), 'th'); });
+
+  var grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  filtered.forEach(function(item){ grid.appendChild(makeCard(item)); });
+  document.getElementById('empty').classList.toggle('on', filtered.length===0);
+}
+
+// ══ CARD ═════════════════════════════════════════════════
+function makeCard(item) {
+  var div = document.createElement('div');
+  var tcls = S.tab==='MI'?'cmi':S.tab==='KM'?'ckm':'cscrap';
+  div.className = 'card '+tcls+(item.inStock?'':' oos');
+
+  // stock pill — Admin เห็นตัวเลข / Viewer เห็นแค่ไอคอน
+  var sc, sl;
+  if(!item.inStock)        { sc='s-out'; sl='หมดสินค้า'; }
+  else if(item.qty<=5)     { sc='s-low'; sl='⚡ '+item.qty; }
+  else if(item.qty<=20)    { sc='s-mid'; sl=item.qty+' ชิ้น'; }
+  else                     { sc='s-ok';  sl='✓ '+item.qty; }
+
+  var pill;
+  if (S.pinOK) {
+    // Admin: เห็นตัวเลข stock ครบ
+    pill = '<div class="spill '+sc+'">'+sl+'</div>';
+  } else {
+    // Viewer: เห็นแค่ไอคอนสถานะ
+    pill = item.inStock
+      ? '<div class="spill s-vw-ok">●</div>'
+      : '<div class="spill s-vw-out">●</div>';
+  }
+
+  // image
+  var imgH = (item.hasImage && item.imageUrl)
+    ? '<img src="'+item.imageUrl+'" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\'">' +
+      '<div class="noimg" style="display:none;position:absolute;inset:0">📷<br><small>ไม่มีรูป</small></div>'
+    : '<div class="noimg">📷<br><small>ไม่มีรูป</small></div>';
+
+  div.innerHTML =
+    '<div class="cimg">'+imgH+pill+'</div>'+
+    '<div class="cbody">'+
+      '<div class="csku">'+esc(item.sku)+'</div>'+
+      '<div class="cname">'+esc(item.name)+'</div>'+
+      '<div class="cfoot">'+
+        '<div class="cprice">฿'+Number(item.price).toLocaleString()+'</div>'+
+        '<div class="ccat">'+esc(item.category)+'</div>'+
+      '</div>'+
+    '</div>';
+
+  div.addEventListener('click', function(){ openLB(item, sc, sl); });
+  return div;
+}
+
+// ══ LIGHTBOX ═════════════════════════════════════════════
+function openLB(item, sc, sl) {
+  var lb = document.getElementById('lb');
+  var im = document.getElementById('lb-img');
+  if (item.hasImage && item.imageUrl) {
+    im.src = item.imageUrl; im.style.display='block';
+  } else {
+    im.src=''; im.style.display='none';
+  }
+  document.getElementById('lb-sku').textContent   = item.sku;
+  document.getElementById('lb-name').textContent  = item.name;
+  document.getElementById('lb-price').textContent = '฿'+Number(item.price).toLocaleString();
+
+  var chip = document.getElementById('lb-chip');
+  if (S.pinOK) {
+    chip.textContent = sl;
+    var bg = sc==='s-ok'?'#d1fae5':sc==='s-mid'?'#fef3c7':sc==='s-low'?'#fee2e2':'#f0f0f0';
+    var tc = sc==='s-ok'?'#065f46':sc==='s-mid'?'#78350f':sc==='s-low'?'#991b1b':'#666';
+    chip.style.background=bg; chip.style.color=tc;
+  } else {
+    // Viewer mode: icon สี เท่านั้น
+    chip.textContent = item.inStock ? '● มีสินค้า' : '● หมดสินค้า';
+    chip.style.background = item.inStock ? '#d1fae5' : '#fee2e2';
+    chip.style.color = item.inStock ? '#065f46' : '#991b1b';
+  }
+  lb.classList.add('on');
+}
+function closeLB(){ document.getElementById('lb').classList.remove('on'); }
+function lbClick(e){ if(e.target.id==='lb') closeLB(); }
+
+// ══ UTILS ════════════════════════════════════════════════
+function esc(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// default: เช็ค "มีของเท่านั้น" ไว้ก่อน
+document.getElementById('instock-chk').checked = true;
+</script>
+</body>
+</html>
