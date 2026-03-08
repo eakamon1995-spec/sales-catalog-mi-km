@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>1200-TF — Sales Catalog</title>
+<title>1200-TF â Sales Catalog</title>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -82,7 +82,8 @@ body{font-family:"Sarabun",sans-serif;background:var(--bg);color:var(--tx);min-h
 .card:hover .card-img img{transform:scale(1.07)}
 .no-img{color:var(--mu);text-align:center;font-size:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;gap:6px}
 .no-img small{font-size:.6rem;font-family:"Space Mono",monospace;word-break:break-all;padding:0 8px;text-align:center}
-.out-banner{position:absolute;bottom:0;left:0;right:0;background:#ef444490;backdrop-filter:blur(4px);text-align:center;font-size:.72rem;font-weight:700;padding:4px;color:#fff}
+.out-banner{position:absolute;bottom:0;left:0;right:0;background:#ef444490;backdrop-filter:blur(4px);text-align:center;font-size:.72rem;font-weight:700;padding:4px;color:#fff;display:none}
+body.admin-mode .out-banner{display:block}
 .card-body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card-sku{font-family:"Space Mono",monospace;font-size:.7rem;color:var(--tab-ac);word-break:break-all;line-height:1.5}
 .card-name{font-size:.8rem;color:var(--mu);line-height:1.4}
@@ -90,7 +91,8 @@ body{font-family:"Sarabun",sans-serif;background:var(--bg);color:var(--tx);min-h
 .stock-wrap{display:flex;align-items:center;gap:7px;min-height:22px}
 .dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
 .dot-ok  {background:var(--gr);box-shadow:0 0 7px #22c55e80}
-.dot-low {background:var(--or);box-shadow:0 0 7px #f9731680}
+.dot-low {background:var(--gr);box-shadow:0 0 7px #22c55e80}  /* viewer: green */
+body.admin-mode .dot-low{background:var(--or);box-shadow:0 0 7px #f9731680}
 .dot-zero{background:var(--re);box-shadow:0 0 7px #ef444480}
 .stock-label{font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:50px;display:none;align-items:center;gap:3px}
 body.admin-mode .stock-label{display:inline-flex}
@@ -150,7 +152,7 @@ body.admin-mode .report-wrap{display:block}
 
 <!-- Lightbox -->
 <div id="lb-overlay" onclick="lbBg(event)">
-  <button class="lb-close" onclick="closeLB()">✕</button>
+  <button class="lb-close" onclick="closeLB()">â</button>
   <div class="lb-wrap">
     <div class="lb-img-wrap" id="lb-img-wrap"></div>
     <div class="lb-info">
@@ -166,7 +168,7 @@ body.admin-mode .report-wrap{display:block}
 </div>
 <div id="loader">
   <div class="spin"></div>
-  <p id="loaderMsg" style="margin-bottom:12px">กำลังโหลดข้อมูลสินค้า...</p>
+  <p id="loaderMsg" style="margin-bottom:12px">à¸à¸³à¸¥à¸±à¸à¹à¸«à¸¥à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¸ªà¸´à¸à¸à¹à¸²...</p>
   <div style="width:260px;background:#252535;border-radius:50px;height:6px;overflow:hidden">
     <div id="loaderBar" style="height:100%;width:0%;background:linear-gradient(90deg,#3b82f6,#22c55e);border-radius:50px;transition:width .4s ease"></div>
   </div>
@@ -177,8 +179,8 @@ body.admin-mode .report-wrap{display:block}
 <!-- PIN Modal -->
 <div class="pin-overlay" id="pinModal">
   <div class="pin-box">
-    <div class="pin-title">🔐 Admin Mode</div>
-    <div class="pin-sub">กรอกรหัส 4 หลักเพื่อดูจำนวน Stock</div>
+    <div class="pin-title">ð Admin Mode</div>
+    <div class="pin-sub">à¸à¸£à¸­à¸à¸£à¸«à¸±à¸ª 4 à¸«à¸¥à¸±à¸à¹à¸à¸·à¹à¸­à¸à¸¹à¸à¸³à¸à¸§à¸ Stock</div>
     <div class="pin-dots">
       <div class="pin-dot" id="pd0"></div><div class="pin-dot" id="pd1"></div>
       <div class="pin-dot" id="pd2"></div><div class="pin-dot" id="pd3"></div>
@@ -188,37 +190,37 @@ body.admin-mode .report-wrap{display:block}
       <button class="pk" onclick="pk('1')">1</button><button class="pk" onclick="pk('2')">2</button><button class="pk" onclick="pk('3')">3</button>
       <button class="pk" onclick="pk('4')">4</button><button class="pk" onclick="pk('5')">5</button><button class="pk" onclick="pk('6')">6</button>
       <button class="pk" onclick="pk('7')">7</button><button class="pk" onclick="pk('8')">8</button><button class="pk" onclick="pk('9')">9</button>
-      <button class="pk del" onclick="pk('C')">✕</button><button class="pk" onclick="pk('0')">0</button><button class="pk del" onclick="pk('DEL')">⌫</button>
+      <button class="pk del" onclick="pk('C')">â</button><button class="pk" onclick="pk('0')">0</button><button class="pk del" onclick="pk('DEL')">â«</button>
     </div>
   </div>
-  <div class="pin-skip" onclick="skipPin()">ข้าม (ไม่แสดง Stock)</div>
+  <div class="pin-skip" onclick="skipPin()">à¸à¹à¸²à¸¡ (à¹à¸¡à¹à¹à¸ªà¸à¸ Stock)</div>
 </div>
 
 <header class="hdr">
   <div class="hdr-inner">
     <div class="logo">1200-TF</div>
-    <div class="update-badge">อัปเดต: <b id="updatedAt">—</b></div>
+    <div class="update-badge">à¸­à¸±à¸à¹à¸à¸: <b id="updatedAt">â</b></div>
     <div class="mode-btn">
-      <button class="mode-badge viewer" id="modeBadge" onclick="togglePin()">👁 Viewer</button>
+      <button class="mode-badge viewer" id="modeBadge" onclick="togglePin()">ð Viewer</button>
     </div>
   </div>
   <div class="search-wrap">
-    <input id="searchInput" type="search" placeholder="🔍 ค้นหา SKU หรือชื่อสินค้า..." oninput="applyFilters()" autocomplete="off">
+    <input id="searchInput" type="search" placeholder="ð à¸à¹à¸à¸«à¸² SKU à¸«à¸£à¸·à¸­à¸à¸·à¹à¸­à¸ªà¸´à¸à¸à¹à¸²..." oninput="applyFilters()" autocomplete="off">
   </div>
 </header>
 
 <div class="tabs-bar">
   <div class="tabs-inner">
-    <button class="tab-btn active" id="tab-mi"    onclick="switchTab('mi')"   >🔵 MI    <span class="tab-cnt" id="cnt-mi">—</span></button>
-    <button class="tab-btn"        id="tab-km"    onclick="switchTab('km')"   >🟢 KM    <span class="tab-cnt" id="cnt-km">—</span></button>
-    <button class="tab-btn"        id="tab-scrap" onclick="switchTab('scrap')">🟠 งานลังเศษ <span class="tab-cnt" id="cnt-scrap">—</span></button>
+    <button class="tab-btn active" id="tab-mi"    onclick="switchTab('mi')"   >ðµ MI    <span class="tab-cnt" id="cnt-mi">â</span></button>
+    <button class="tab-btn"        id="tab-km"    onclick="switchTab('km')"   >ð¢ KM    <span class="tab-cnt" id="cnt-km">â</span></button>
+    <button class="tab-btn"        id="tab-scrap" onclick="switchTab('scrap')">ð  à¸à¸²à¸à¸¥à¸±à¸à¹à¸¨à¸© <span class="tab-cnt" id="cnt-scrap">â</span></button>
   </div>
 </div>
 
 <div class="filter-bar">
   <div id="catPills" style="display:flex;gap:8px;flex-wrap:wrap"></div>
-  <select class="sort-sel" id="sortSel" onchange="reRenderTab()"><option value="sku">เรียง: รหัส A→Z</option><option value="name">เรียง: ชื่อ</option><option value="price-asc">เรียง: ราคา ↑</option><option value="price-desc">เรียง: ราคา ↓</option><option value="stock-desc">เรียง: Stock มาก</option></select><label class="stock-filter" id="sfBtn">
-    <input type="checkbox" id="stockOnly" onchange="applyFilters()"> มีของเท่านั้น
+  <select class="sort-sel" id="sortSel" onchange="reRenderTab()"><option value="sku">à¹à¸£à¸µà¸¢à¸: à¸£à¸«à¸±à¸ª AâZ</option><option value="name">à¹à¸£à¸µà¸¢à¸: à¸à¸·à¹à¸­</option><option value="price-asc">à¹à¸£à¸µà¸¢à¸: à¸£à¸²à¸à¸² â</option><option value="price-desc">à¹à¸£à¸µà¸¢à¸: à¸£à¸²à¸à¸² â</option><option value="stock-desc">à¹à¸£à¸µà¸¢à¸: Stock à¸¡à¸²à¸</option></select><label class="stock-filter" id="sfBtn">
+    <input type="checkbox" id="stockOnly" onchange="applyFilters()"> à¸¡à¸µà¸à¸­à¸à¹à¸à¹à¸²à¸à¸±à¹à¸
   </label>
 </div>
 
@@ -230,10 +232,10 @@ body.admin-mode .report-wrap{display:block}
 <div class="toast" id="toast"></div>
 
 <script>
-// ── ตั้งค่า ── ต้องตรงกับ Code_v7.gs ──────────────────────────
-var PIN       = "3112";                    // ← ตรงกับ ADMIN_PIN
+// ââ à¸à¸±à¹à¸à¸à¹à¸² ââ à¸à¹à¸­à¸à¸à¸£à¸à¸à¸±à¸ Code_v7.gs ââââââââââââââââââââââââââ
+var PIN       = "3112";                    // â à¸à¸£à¸à¸à¸±à¸ ADMIN_PIN
 var DATA_URL  = "data/catalog.json";  // GitHub Pages path
-var SCRAP_KEY = "ลงข้อมูล WIP-S26";       // ← ตรงกับ CONFIG.SHEET_SCRAP
+var SCRAP_KEY = "à¸¥à¸à¸à¹à¸­à¸¡à¸¹à¸¥ WIP-S26";       // â à¸à¸£à¸à¸à¸±à¸ CONFIG.SHEET_SCRAP
 var LOW_QTY   = 5;
 
 var catalog = null;
@@ -242,8 +244,8 @@ var isAdmin = false;
 var pinBuf  = "";
 var curCat  = "all";
 
-// ── โหลด JSON ────────────────────────────────────────────────
-// ── Progress bar simulation ───────────────────────────────────
+// ââ à¹à¸«à¸¥à¸ JSON ââââââââââââââââââââââââââââââââââââââââââââââââ
+// ââ Progress bar simulation âââââââââââââââââââââââââââââââââââ
 var _loadStart = Date.now();
 var _barPct    = 0;
 var _barTimer  = null;
@@ -261,29 +263,29 @@ function _tickBar(target, msg) {
     if (etaEl && pct < 100) {
       var elapsed = (Date.now() - _loadStart) / 1000;
       var eta     = pct > 5 ? Math.max(0, Math.round(elapsed / pct * (100 - pct))) : null;
-      etaEl.textContent = eta !== null ? "เหลืออีกประมาณ " + eta + " วินาที" : "";
+      etaEl.textContent = eta !== null ? "à¹à¸«à¸¥à¸·à¸­à¸­à¸µà¸à¸à¸£à¸°à¸¡à¸²à¸ " + eta + " à¸§à¸´à¸à¸²à¸à¸µ" : "";
     }
     if (msg) document.getElementById("loaderMsg").textContent = msg;
   }, 60);
 }
-_tickBar(30, "กำลังโหลดข้อมูลสินค้า...");
+_tickBar(30, "à¸à¸³à¸¥à¸±à¸à¹à¸«à¸¥à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¸ªà¸´à¸à¸à¹à¸²...");
 
 fetch(DATA_URL + "?t=" + Date.now())
   .then(function(r) {
-    _tickBar(60, "กำลังประมวลผลข้อมูล...");
-    if (!r.ok) throw new Error("HTTP " + r.status + " — รัน Full Sync ก่อนนะครับ");
+    _tickBar(60, "à¸à¸³à¸¥à¸±à¸à¸à¸£à¸°à¸¡à¸§à¸¥à¸à¸¥à¸à¹à¸­à¸¡à¸¹à¸¥...");
+    if (!r.ok) throw new Error("HTTP " + r.status + " â à¸£à¸±à¸ Full Sync à¸à¹à¸­à¸à¸à¸°à¸à¸£à¸±à¸");
     return r.json();
   })
   .then(function(data) {
-    _tickBar(85, "กำลังเตรียมแสดงสินค้า...");
+    _tickBar(85, "à¸à¸³à¸¥à¸±à¸à¹à¸à¸£à¸µà¸¢à¸¡à¹à¸ªà¸à¸à¸ªà¸´à¸à¸à¹à¸²...");
     catalog = data;
 
     setTimeout(function() {
-      _tickBar(100, "โหลดเสร็จแล้ว! ✅");
+      _tickBar(100, "à¹à¸«à¸¥à¸à¹à¸ªà¸£à¹à¸à¹à¸¥à¹à¸§! â");
       document.getElementById("loaderEta").textContent = "";
       document.getElementById("loaderPct").textContent = "100%";
 
-      // แสดงเวลา
+      // à¹à¸ªà¸à¸à¹à¸§à¸¥à¸²
       if (data.updatedAt) {
         var d = new Date(data.updatedAt);
         document.getElementById("updatedAt").textContent =
@@ -291,7 +293,7 @@ fetch(DATA_URL + "?t=" + Date.now())
           d.toLocaleTimeString("th-TH",{hour:"2-digit",minute:"2-digit"});
       }
 
-      // จำนวนสินค้า
+      // à¸à¸³à¸à¸§à¸à¸ªà¸´à¸à¸à¹à¸²
       document.getElementById("cnt-mi").textContent    = (data["MI"]      ||[]).length;
       document.getElementById("cnt-km").textContent    = (data["KM"]      ||[]).length;
       document.getElementById("cnt-scrap").textContent = (data[SCRAP_KEY] ||[]).length;
@@ -305,13 +307,13 @@ fetch(DATA_URL + "?t=" + Date.now())
   .catch(function(e) {
     clearInterval(_barTimer);
     var el = document.getElementById("loaderMsg");
-    el.textContent = "⚠️ " + e.message;
+    el.textContent = "â ï¸ " + e.message;
     el.style.color = "#f87171";
     document.getElementById("loaderPct").textContent = "";
     document.getElementById("loaderEta").textContent = "";
   });
 
-// ── Render tab ────────────────────────────────────────────────
+// ââ Render tab ââââââââââââââââââââââââââââââââââââââââââââââââ
 function renderTab(tab) {
   curTab = tab; curCat = "all";
   var colors = {mi:"#3b82f6", km:"#22c55e", scrap:"#f97316"};
@@ -322,18 +324,18 @@ function renderTab(tab) {
     document.getElementById("panel-"+t).classList.toggle("active", t===tab);
   });
 
-  // ดึงข้อมูล — key ตรงกับที่ Apps Script push
+  // à¸à¸¶à¸à¸à¹à¸­à¸¡à¸¹à¸¥ â key à¸à¸£à¸à¸à¸±à¸à¸à¸µà¹ Apps Script push
   var rawKey = tab==="scrap" ? SCRAP_KEY : tab.toUpperCase();
   var items  = (catalog && catalog[rawKey]) || [];
 
   if (!items.length) {
     document.getElementById("panel-"+tab).innerHTML =
-      "<div class='empty-msg'>ไม่มีข้อมูลสินค้า<br><small style='color:var(--mu)'>รัน Full Sync ใน Apps Script ก่อน</small></div>";
+      "<div class='empty-msg'>à¹à¸¡à¹à¸¡à¸µà¸à¹à¸­à¸¡à¸¹à¸¥à¸ªà¸´à¸à¸à¹à¸²<br><small style='color:var(--mu)'>à¸£à¸±à¸ Full Sync à¹à¸ Apps Script à¸à¹à¸­à¸</small></div>";
     document.getElementById("catPills").innerHTML = "";
     return;
   }
 
-  // เรียง
+  // à¹à¸£à¸µà¸¢à¸
   var sortBy = (document.getElementById("sortSel")||{value:"sku"}).value;
   var sorted = items.slice().sort(function(a,b){
     if(sortBy==="name") return (a.name||"").localeCompare(b.name||"","th");
@@ -342,22 +344,22 @@ function renderTab(tab) {
     if(sortBy==="stock-desc") return (b.qty||0)-(a.qty||0);
     return (a.sku||"").localeCompare(b.sku||"",undefined,{numeric:true});
   });
-  // auto-fill category จาก SKU ถ้า category = "ไม่ระบุ" หรือว่าง
+  // auto-fill category à¸à¸²à¸ SKU à¸à¹à¸² category = "à¹à¸¡à¹à¸£à¸°à¸à¸¸" à¸«à¸£à¸·à¸­à¸§à¹à¸²à¸
   sorted.forEach(function(item){
-    if(!item.category||item.category==="ไม่ระบุ") item.category=categorizeSKU(item.sku);
+    if(!item.category||item.category==="à¹à¸¡à¹à¸£à¸°à¸à¸¸") item.category=categorizeSKU(item.sku);
   });
 
-  // จัดกลุ่ม category
+  // à¸à¸±à¸à¸à¸¥à¸¸à¹à¸¡ category
   var cats = {};
   sorted.forEach(function(item){
-    var c = item.category||"ไม่ระบุ";
+    var c = item.category||"à¹à¸¡à¹à¸£à¸°à¸à¸¸";
     if(!cats[c]) cats[c]=[];
     cats[c].push(item);
   });
   var catKeys = Object.keys(cats).sort();
 
   // Category pills
-  var pills = '<div class="cat-pill active" onclick="filterCat(\'all\',this)">ทั้งหมด</div>';
+  var pills = '<div class="cat-pill active" onclick="filterCat(\'all\',this)">à¸à¸±à¹à¸à¸«à¸¡à¸</div>';
   catKeys.forEach(function(cat){
     pills += '<div class="cat-pill" data-cat="'+cat+'" onclick="filterCat(\''+cat.replace(/'/g,"\\'")+ '\',this)">'+cat+'</div>';
   });
@@ -368,7 +370,7 @@ function renderTab(tab) {
   catKeys.forEach(function(cat){
     var sid = cat.replace(/\W/g,"_");
     html += '<section class="cat-sec" id="cs_'+tab+'_'+sid+'" data-cat="'+cat+'">';
-    html += '<h2 class="cat-title">📦 '+cat+'<span class="cat-cnt">'+cats[cat].length+' รายการ</span></h2>';
+    html += '<h2 class="cat-title">ð¦ '+cat+'<span class="cat-cnt">'+cats[cat].length+' à¸£à¸²à¸¢à¸à¸²à¸£</span></h2>';
     html += '<div class="grid">';
 
     cats[cat].forEach(function(item){
@@ -376,18 +378,18 @@ function renderTab(tab) {
       var zero = qty <= 0;
       var low  = !zero && qty <= LOW_QTY;
 
-      // ── รูปภาพ ── ใช้ imageUrl จาก JSON โดยตรง ──
+      // ââ à¸£à¸¹à¸à¸ à¸²à¸ ââ à¹à¸à¹ imageUrl à¸à¸²à¸ JSON à¹à¸à¸¢à¸à¸£à¸ ââ
       var imgTag;
       if (item.imageUrl) {
         imgTag = '<img src="'+item.imageUrl+'" alt="'+item.sku+'" loading="lazy" onerror="imgErr(this,\''+item.sku+'\')">';
-        if (zero) imgTag += '<div class="out-banner">หมด</div>';
+        if (zero) imgTag += '<div class="out-banner">à¸«à¸¡à¸</div>';
       } else {
-        imgTag = '<div class="no-img">📷<small>'+item.sku+'</small></div>';
+        imgTag = '<div class="no-img">ð·<small>'+item.sku+'</small></div>';
       }
 
       var dotC  = zero?"dot-zero": low?"dot-low":"dot-ok";
       var skC   = zero?"sk-zero" : low?"sk-low" :"sk-ok";
-      var skLbl = zero?"หมด"      : low?"⚠️ "+qty+" ชิ้น":"✅ "+qty+" ชิ้น";
+      var skLbl = zero?"à¸«à¸¡à¸"      : low?"â ï¸ "+qty+" à¸à¸´à¹à¸":"â "+qty+" à¸à¸´à¹à¸";
       var nameH = (item.name && item.name!==item.sku)
         ? '<div class="card-name">'+item.name+'</div>' : '';
       var skuS  = item.sku.replace(/'/g,"\\'");
@@ -402,7 +404,7 @@ function renderTab(tab) {
               '<span class="dot '+dotC+'"></span>' +
               '<span class="stock-label '+skC+'">'+skLbl+'</span>' +
             '</div>' +
-            '<button class="copy-btn" onclick="copySku(\''+skuS+'\')">📋 คัดลอก SKU</button>' +
+            '<button class="copy-btn" onclick="copySku(\''+skuS+'\')">ð à¸à¸±à¸à¸¥à¸­à¸ SKU</button>' +
           '</div>' +
         '</div>';
     });
@@ -418,21 +420,21 @@ function renderTab(tab) {
 }
 
 function buildReport(outOfS, noImg) {
-  var h = '<div class="report-wrap"><div class="rpt-head">📋 รายงานสถานะสินค้า</div>';
-  h += '<div class="rpt-toggle" onclick="tgl(\'oos\')"><h3>❌ สินค้าหมด Stock <span class="rpt-cnt">'+outOfS.length+' รายการ</span></h3><span id="oos-arr">▼</span></div>';
+  var h = '<div class="report-wrap"><div class="rpt-head">ð à¸£à¸²à¸¢à¸à¸²à¸à¸ªà¸à¸²à¸à¸°à¸ªà¸´à¸à¸à¹à¸²</div>';
+  h += '<div class="rpt-toggle" onclick="tgl(\'oos\')"><h3>â à¸ªà¸´à¸à¸à¹à¸²à¸«à¸¡à¸ Stock <span class="rpt-cnt">'+outOfS.length+' à¸£à¸²à¸¢à¸à¸²à¸£</span></h3><span id="oos-arr">â¼</span></div>';
   h += '<div class="rpt-body" id="oos">';
-  if (!outOfS.length) { h += '<div class="rpt-empty">✅ ไม่มีสินค้าหมด</div>'; }
+  if (!outOfS.length) { h += '<div class="rpt-empty">â à¹à¸¡à¹à¸¡à¸µà¸ªà¸´à¸à¸à¹à¸²à¸«à¸¡à¸</div>'; }
   else {
-    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>ชื่อ</th><th>Qty</th></tr></thead><tbody>';
+    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>à¸à¸·à¹à¸­</th><th>Qty</th></tr></thead><tbody>';
     outOfS.forEach(function(i){ h+='<tr><td>'+i.sku+'</td><td style="font-family:Sarabun,sans-serif;font-size:.78rem">'+i.name+'</td><td>'+i.qty+'</td></tr>'; });
     h += '</tbody></table>';
   }
   h += '</div>';
-  h += '<div class="rpt-toggle" style="margin-top:8px" onclick="tgl(\'nim\')"><h3>📷 มี Stock แต่ไม่มีรูป <span class="rpt-cnt">'+noImg.length+' รายการ</span></h3><span id="nim-arr">▼</span></div>';
+  h += '<div class="rpt-toggle" style="margin-top:8px" onclick="tgl(\'nim\')"><h3>ð· à¸¡à¸µ Stock à¹à¸à¹à¹à¸¡à¹à¸¡à¸µà¸£à¸¹à¸ <span class="rpt-cnt">'+noImg.length+' à¸£à¸²à¸¢à¸à¸²à¸£</span></h3><span id="nim-arr">â¼</span></div>';
   h += '<div class="rpt-body" id="nim">';
-  if (!noImg.length) { h += '<div class="rpt-empty">✅ ทุกรายการมีรูปครบ</div>'; }
+  if (!noImg.length) { h += '<div class="rpt-empty">â à¸à¸¸à¸à¸£à¸²à¸¢à¸à¸²à¸£à¸¡à¸µà¸£à¸¹à¸à¸à¸£à¸</div>'; }
   else {
-    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>ชื่อ</th><th>Qty</th></tr></thead><tbody>';
+    h += '<table class="rpt-table"><thead><tr><th>SKU</th><th>à¸à¸·à¹à¸­</th><th>Qty</th></tr></thead><tbody>';
     noImg.forEach(function(i){ h+='<tr><td>'+i.sku+'</td><td style="font-family:Sarabun,sans-serif;font-size:.78rem">'+i.name+'</td><td>'+i.qty+'</td></tr>'; });
     h += '</tbody></table>';
   }
@@ -441,55 +443,55 @@ function buildReport(outOfS, noImg) {
 }
 
 
-// ── Auto-categorize จาก SKU prefix ────────────────────────────
+// ââ Auto-categorize à¸à¸²à¸ SKU prefix ââââââââââââââââââââââââââââ
 function categorizeSKU(sku) {
   var s = String(sku||"");
-  if (!s) return "ไม่ระบุ";
-  if (s.substring(0,3)==="KSB") return "เป่าลม";
+  if (!s) return "à¹à¸¡à¹à¸£à¸°à¸à¸¸";
+  if (s.substring(0,3)==="KSB") return "à¹à¸à¹à¸²à¸¥à¸¡";
   if (s.substring(0,3)==="MI-") {
     var s9=s.substring(0,9);
-    if(s9==="MI-010001"||s9==="MI-010002"||s9==="MI-010003") return "09-ทำความสะอาด";
+    if(s9==="MI-010001"||s9==="MI-010002"||s9==="MI-010003") return "09-à¸à¸³à¸à¸§à¸²à¸¡à¸ªà¸°à¸­à¸²à¸";
     var s8=s.substring(0,8);
-    if(["MI-B0611","MI-B0614","MI-B0815","MI-B0816","MI-B0918","MI-B1220"].indexOf(s8)>=0) return "04-พลาสติก";
+    if(["MI-B0611","MI-B0614","MI-B0815","MI-B0816","MI-B0918","MI-B1220"].indexOf(s8)>=0) return "04-à¸à¸¥à¸²à¸ªà¸à¸´à¸";
     var s7=s.substring(0,7);
-    if(s7==="MI-TAPE") return "03-เครื่องเขียน";
+    if(s7==="MI-TAPE") return "03-à¹à¸à¸£à¸·à¹à¸­à¸à¹à¸à¸µà¸¢à¸";
     var s6=s.substring(0,6);
-    if(s6==="MI-CUP") return "05-เครื่องครัว";
-    if(s6==="MI-EAJ") return "07-เครื่องมือช่าง";
-    if(s6==="MI-STS") return "06-สแตนเลส";
+    if(s6==="MI-CUP") return "05-à¹à¸à¸£à¸·à¹à¸­à¸à¸à¸£à¸±à¸§";
+    if(s6==="MI-EAJ") return "07-à¹à¸à¸£à¸·à¹à¸­à¸à¸¡à¸·à¸­à¸à¹à¸²à¸";
+    if(s6==="MI-STS") return "06-à¸ªà¹à¸à¸à¹à¸¥à¸ª";
     var s5=s.substring(0,5);
-    var m5={"MI-88":"สินค้าเทศกาล","MI-37":"07-เครื่องมือช่าง","MI-17":"07-เครื่องมือช่าง",
-      "MI-13":"03-เครื่องเขียน","MI-12":"02-กิ๊ฟช็อบ","MI-AP":"02-กิ๊ฟช็อบ",
-      "MI-CN":"09-ทำความสะอาด","MI-EK":"04-พลาสติก","MI-GR":"08-ทั่วไป",
-      "MI-PP":"PETPARTY","MI-PT":"04-พลาสติก","MI-RD":"01-ของเล่น 20",
-      "MI-SP":"02-กิ๊ฟช็อบ","MI-TN":"07-เครื่องมือช่าง","MI-TY":"01-ของเล่น 20",
-      "MI-SR":"03-เครื่องเขียน","MI-00":"00-สัตว์เลี้ยง","MI-01":"01-ของเล่น 20",
-      "MI-02":"02-กิ๊ฟช็อบ","MI-03":"03-เครื่องเขียน","MI-04":"04-พลาสติก",
-      "MI-05":"05-เครื่องครัว","MI-06":"06-สแตนเลส","MI-07":"07-เครื่องมือช่าง",
-      "MI-08":"08-ทั่วไป","MI-09":"09-ทำความสะอาด"};
+    var m5={"MI-88":"à¸ªà¸´à¸à¸à¹à¸²à¹à¸à¸¨à¸à¸²à¸¥","MI-37":"07-à¹à¸à¸£à¸·à¹à¸­à¸à¸¡à¸·à¸­à¸à¹à¸²à¸","MI-17":"07-à¹à¸à¸£à¸·à¹à¸­à¸à¸¡à¸·à¸­à¸à¹à¸²à¸",
+      "MI-13":"03-à¹à¸à¸£à¸·à¹à¸­à¸à¹à¸à¸µà¸¢à¸","MI-12":"02-à¸à¸´à¹à¸à¸à¹à¸­à¸","MI-AP":"02-à¸à¸´à¹à¸à¸à¹à¸­à¸",
+      "MI-CN":"09-à¸à¸³à¸à¸§à¸²à¸¡à¸ªà¸°à¸­à¸²à¸","MI-EK":"04-à¸à¸¥à¸²à¸ªà¸à¸´à¸","MI-GR":"08-à¸à¸±à¹à¸§à¹à¸",
+      "MI-PP":"PETPARTY","MI-PT":"04-à¸à¸¥à¸²à¸ªà¸à¸´à¸","MI-RD":"01-à¸à¸­à¸à¹à¸¥à¹à¸ 20",
+      "MI-SP":"02-à¸à¸´à¹à¸à¸à¹à¸­à¸","MI-TN":"07-à¹à¸à¸£à¸·à¹à¸­à¸à¸¡à¸·à¸­à¸à¹à¸²à¸","MI-TY":"01-à¸à¸­à¸à¹à¸¥à¹à¸ 20",
+      "MI-SR":"03-à¹à¸à¸£à¸·à¹à¸­à¸à¹à¸à¸µà¸¢à¸","MI-00":"00-à¸ªà¸±à¸à¸§à¹à¹à¸¥à¸µà¹à¸¢à¸","MI-01":"01-à¸à¸­à¸à¹à¸¥à¹à¸ 20",
+      "MI-02":"02-à¸à¸´à¹à¸à¸à¹à¸­à¸","MI-03":"03-à¹à¸à¸£à¸·à¹à¸­à¸à¹à¸à¸µà¸¢à¸","MI-04":"04-à¸à¸¥à¸²à¸ªà¸à¸´à¸",
+      "MI-05":"05-à¹à¸à¸£à¸·à¹à¸­à¸à¸à¸£à¸±à¸§","MI-06":"06-à¸ªà¹à¸à¸à¹à¸¥à¸ª","MI-07":"07-à¹à¸à¸£à¸·à¹à¸­à¸à¸¡à¸·à¸­à¸à¹à¸²à¸",
+      "MI-08":"08-à¸à¸±à¹à¸§à¹à¸","MI-09":"09-à¸à¸³à¸à¸§à¸²à¸¡à¸ªà¸°à¸­à¸²à¸"};
     if(m5[s5]) return m5[s5];
-    return "01-ของเล่น 20";
+    return "01-à¸à¸­à¸à¹à¸¥à¹à¸ 20";
   }
   // KM logic
   var s4=s.substring(0,4), s3=s.substring(0,3), s2=s.substring(0,2);
-  if(s.substring(0,5)==="KM-BC") return "KM-เซรามิก";
-  if(s2==="KC") return "KM-เซรามิก";
-  if(s2==="KG"||s4==="KM-G") return "KM-แก้ว";
-  if(s2==="KS"||s4==="KM-S") return "KM-สแตนเลส";
-  if(s2==="KP"||s4==="KM-P") return "KM-พลาสติก food grade";
-  if(s2==="KR"||s4==="KM-R") return "KM-ชานอ้อย";
-  if(s4==="KM-W") return "KM-ไม้";
-  if(s2==="KM") return "KM-โกมลเครื่องครัว";
+  if(s.substring(0,5)==="KM-BC") return "KM-à¹à¸à¸£à¸²à¸¡à¸´à¸";
+  if(s2==="KC") return "KM-à¹à¸à¸£à¸²à¸¡à¸´à¸";
+  if(s2==="KG"||s4==="KM-G") return "KM-à¹à¸à¹à¸§";
+  if(s2==="KS"||s4==="KM-S") return "KM-à¸ªà¹à¸à¸à¹à¸¥à¸ª";
+  if(s2==="KP"||s4==="KM-P") return "KM-à¸à¸¥à¸²à¸ªà¸à¸´à¸ food grade";
+  if(s2==="KR"||s4==="KM-R") return "KM-à¸à¸²à¸à¸­à¹à¸­à¸¢";
+  if(s4==="KM-W") return "KM-à¹à¸¡à¹";
+  if(s2==="KM") return "KM-à¹à¸à¸¡à¸¥à¹à¸à¸£à¸·à¹à¸­à¸à¸à¸£à¸±à¸§";
   var km3=["KCB","KCP","KGC","KCS","KPB","KPM","KPS","KRP","KSP","KSK","KSS","KSZ","KGS","KPU","KSU"];
   if(km3.indexOf(s3)>=0) return "KM";
-  if(s.substring(0,1)==="บ") return "สินค้าแปลง";
-  return "สินค้าแผนกอื่น";
+  if(s.substring(0,1)==="à¸") return "à¸ªà¸´à¸à¸à¹à¸²à¹à¸à¸¥à¸";
+  return "à¸ªà¸´à¸à¸à¹à¸²à¹à¸à¸à¸à¸­à¸·à¹à¸";
 }
 
-// ── Re-render with new sort ───────────────────────────────────
+// ââ Re-render with new sort âââââââââââââââââââââââââââââââââââ
 function reRenderTab() { renderTab(curTab); }
 
-// ── Lightbox ──────────────────────────────────────────────────
+// ââ Lightbox ââââââââââââââââââââââââââââââââââââââââââââââââââ
 function openLB(item) {
   var qty = parseInt(item.qty)||0;
   var zero = qty<=0, low = !zero && qty<=LOW_QTY;
@@ -498,20 +500,20 @@ function openLB(item) {
   if (item.imageUrl) {
     wrap.innerHTML = '<img src="'+item.imageUrl+'" alt="'+item.sku+'" loading="lazy" onerror="imgErr(this,\''+item.sku+'\')">';
   } else {
-    wrap.innerHTML = '<div class="lb-no-img">📷<br><small style=\"font-size:.65rem;font-family:Space Mono,monospace\">'+item.sku+'</small></div>';
+    wrap.innerHTML = '<div class="lb-no-img">ð·<br><small style=\"font-size:.65rem;font-family:Space Mono,monospace\">'+item.sku+'</small></div>';
   }
   document.getElementById("lb-sku").textContent  = item.sku;
   document.getElementById("lb-name").textContent = item.name||item.sku;
-  document.getElementById("lb-price").textContent= "฿"+Number(item.price||0).toLocaleString();
-  document.getElementById("lb-cat").textContent  = "📂 "+(item.category||"");
+  document.getElementById("lb-price").textContent= "à¸¿"+Number(item.price||0).toLocaleString();
+  document.getElementById("lb-cat").textContent  = "ð "+(item.category||"");
   var badge = document.getElementById("lb-stock-badge");
   if (isAdmin) {
-    badge.textContent = zero?"หมดสินค้า": low?"⚠️ "+qty+" ชิ้น":"✅ "+qty+" ชิ้น";
+    badge.textContent = zero?"à¸«à¸¡à¸à¸ªà¸´à¸à¸à¹à¸²": low?"â ï¸ "+qty+" à¸à¸´à¹à¸":"â "+qty+" à¸à¸´à¹à¸";
     badge.style.cssText = zero?"background:#ef444420;color:#f87171":
       low?"background:#f9731620;color:#fb923c":
           "background:#22c55e20;color:#4ade80";
   } else {
-    badge.textContent = zero?"● หมด":"● มีสินค้า";
+    badge.textContent = zero?"â à¸«à¸¡à¸":"â à¸¡à¸µà¸ªà¸´à¸à¸à¹à¸²";
     badge.style.cssText = zero?"background:#ef444420;color:#f87171":"background:#22c55e20;color:#4ade80";
   }
   document.getElementById("lb-overlay").classList.add("on");
@@ -527,14 +529,14 @@ function openLBByIdx(tabKey, sku) {
 function closeLB() { document.getElementById("lb-overlay").classList.remove("on"); }
 function lbBg(e) { if(e.target.id==="lb-overlay") closeLB(); }
 
-// ── Switch tab ────────────────────────────────────────────────
+// ââ Switch tab ââââââââââââââââââââââââââââââââââââââââââââââââ
 function switchTab(tab) {
   document.getElementById("searchInput").value = "";
   document.getElementById("stockOnly").checked = false;
   renderTab(tab);
 }
 
-// ── Category filter ───────────────────────────────────────────
+// ââ Category filter âââââââââââââââââââââââââââââââââââââââââââ
 function filterCat(cat, el) {
   curCat = cat;
   document.querySelectorAll(".cat-pill").forEach(function(p){ p.classList.remove("active"); });
@@ -545,7 +547,7 @@ function filterCat(cat, el) {
   applyFilters();
 }
 
-// ── Search + stock filter ─────────────────────────────────────
+// ââ Search + stock filter âââââââââââââââââââââââââââââââââââââ
 function applyFilters() {
   var q         = document.getElementById("searchInput").value.trim().toLowerCase();
   var stockOnly = document.getElementById("stockOnly").checked;
@@ -562,15 +564,15 @@ function applyFilters() {
   });
 }
 
-// ── Helpers ───────────────────────────────────────────────────
+// ââ Helpers âââââââââââââââââââââââââââââââââââââââââââââââââââ
 function copySku(sku) {
-  navigator.clipboard.writeText(sku).then(function(){ showToast("📋 คัดลอก "+sku+" แล้ว!"); });
+  navigator.clipboard.writeText(sku).then(function(){ showToast("ð à¸à¸±à¸à¸¥à¸­à¸ "+sku+" à¹à¸¥à¹à¸§!"); });
 }
 function imgErr(img, sku) {
   img.style.display = "none";
   var d = document.createElement("div");
   d.className = "no-img";
-  d.innerHTML = "📷<small>"+(sku||"")+"</small>";
+  d.innerHTML = "ð·<small>"+(sku||"")+"</small>";
   img.parentNode.insertBefore(d, img);
 }
 function showToast(m) {
@@ -580,10 +582,10 @@ function showToast(m) {
 }
 function tgl(id) {
   var b=document.getElementById(id),a=document.getElementById(id+"-arr");
-  if(b&&a) a.textContent=b.classList.toggle("open")?"▲":"▼";
+  if(b&&a) a.textContent=b.classList.toggle("open")?"â²":"â¼";
 }
 
-// ── PIN ───────────────────────────────────────────────────────
+// ââ PIN âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function togglePin() {
   if (isAdmin) { exitAdmin(); return; }
   pinBuf = ""; renderDots();
@@ -607,11 +609,11 @@ function pk(k) {
       document.getElementById("pinModal").classList.remove("show");
       document.body.classList.add("admin-mode");
       var mb=document.getElementById("modeBadge");
-      mb.textContent="🔑 Admin"; mb.className="mode-badge admin";
+      mb.textContent="ð Admin"; mb.className="mode-badge admin";
       renderTab("mi");
-      showToast("✅ Admin Mode — เห็นจำนวน Stock ทั้งหมด");
+      showToast("â Admin Mode â à¹à¸«à¹à¸à¸à¸³à¸à¸§à¸ Stock à¸à¸±à¹à¸à¸«à¸¡à¸");
     } else {
-      err.textContent="รหัสไม่ถูกต้อง"; pinBuf=""; renderDots();
+      err.textContent="à¸£à¸«à¸±à¸ªà¹à¸¡à¹à¸à¸¹à¸à¸à¹à¸­à¸"; pinBuf=""; renderDots();
     }
   }
 }
@@ -621,8 +623,8 @@ function renderDots() {
 function exitAdmin() {
   isAdmin=false; document.body.classList.remove("admin-mode");
   var mb=document.getElementById("modeBadge");
-  mb.textContent="👁 Viewer"; mb.className="mode-badge viewer";
-  showToast("🔒 กลับสู่ Viewer Mode");
+  mb.textContent="ð Viewer"; mb.className="mode-badge viewer";
+  showToast("ð à¸à¸¥à¸±à¸à¸ªà¸¹à¹ Viewer Mode");
 }
 </script>
 </body>
