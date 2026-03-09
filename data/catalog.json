@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-09T11:56:42.830Z",
+  "updatedAt": "2026-03-09T12:00:57.431Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -8,9 +8,9 @@
       "qty": 4680,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1uEfjp0r8pbFqxQle14B6WHvPl6f25VPZ=w400",
+      "fileId": "1uEfjp0r8pbFqxQle14B6WHvPl6f25VPZ"
     },
     {
       "sku": "MI-00013",
@@ -19,9 +19,9 @@
       "qty": 4680,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Kk7X5i8Vl9V4mdJ1otox-Q-vIsSQEzj0=w400",
+      "fileId": "1Kk7X5i8Vl9V4mdJ1otox-Q-vIsSQEzj0"
     },
     {
       "sku": "MI-00014",
@@ -30,9 +30,9 @@
       "qty": 3120,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1e0t6uEj_EXDfcPmUSmdWzvZI_d3rpo7G=w400",
+      "fileId": "1e0t6uEj_EXDfcPmUSmdWzvZI_d3rpo7G"
     },
     {
       "sku": "MI-00015",
@@ -41,9 +41,9 @@
       "qty": 6120,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1nGDZBxjLOLhJjlLKVW2KX4W1NTYdnQkt=w400",
+      "fileId": "1nGDZBxjLOLhJjlLKVW2KX4W1NTYdnQkt"
     },
     {
       "sku": "MI-00016",
@@ -52,9 +52,9 @@
       "qty": 4680,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1wIGwaTKIj3PSXDyrtcEl0-gHV6f4_TfH=w400",
+      "fileId": "1wIGwaTKIj3PSXDyrtcEl0-gHV6f4_TfH"
     },
     {
       "sku": "MI-00018",
@@ -63,9 +63,9 @@
       "qty": 2160,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1O2fpMBy2uKkoc_fgp-7jm3JYkP5p8-Qr=w400",
+      "fileId": "1O2fpMBy2uKkoc_fgp-7jm3JYkP5p8-Qr"
     },
     {
       "sku": "MI-00019",
@@ -74,9 +74,9 @@
       "qty": 4680,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dXbsN8Hfk8kj25M0t7PaYw1NS5mmCtkc=w400",
+      "fileId": "1dXbsN8Hfk8kj25M0t7PaYw1NS5mmCtkc"
     },
     {
       "sku": "MI-00021",
@@ -85,9 +85,9 @@
       "qty": 240,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1gT1QnIuuUk5C93-yuRZuU1chV4c6nLdV=w400",
+      "fileId": "1gT1QnIuuUk5C93-yuRZuU1chV4c6nLdV"
     },
     {
       "sku": "MI-00050",
@@ -96,9 +96,9 @@
       "qty": 1680,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1E5YSQKH3DvKonrpsO_951RUG9k4jwkpz=w400",
+      "fileId": "1E5YSQKH3DvKonrpsO_951RUG9k4jwkpz"
     },
     {
       "sku": "MI-00051",
@@ -107,9 +107,9 @@
       "qty": 1200,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1rd2rLJjgtXKKwDljupC7_cQ9wAVXnzbU=w400",
+      "fileId": "1rd2rLJjgtXKKwDljupC7_cQ9wAVXnzbU"
     },
     {
       "sku": "MI-0062D",
@@ -118,9 +118,9 @@
       "qty": 320,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1tkq17gBfqRUz7FcFh6bG_5gTG_zEmQvO=w400",
+      "fileId": "1tkq17gBfqRUz7FcFh6bG_5gTG_zEmQvO"
     },
     {
       "sku": "MI-01060",
@@ -129,9 +129,9 @@
       "qty": 1152,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/15yI4I8T6k-kuBq1YyKGWGRs9_UTNA7hI=w400",
+      "fileId": "15yI4I8T6k-kuBq1YyKGWGRs9_UTNA7hI"
     },
     {
       "sku": "MI-01070",
@@ -140,9 +140,9 @@
       "qty": 512,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1FjL08vh3jHE2pLa-hDex1h7YQgP4iSHz=w400",
+      "fileId": "1FjL08vh3jHE2pLa-hDex1h7YQgP4iSHz"
     },
     {
       "sku": "MI-01074",
@@ -151,9 +151,9 @@
       "qty": 3000,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1G4VWzfqxTJbUnS-IOOqOB4_45hCedSMe=w400",
+      "fileId": "1G4VWzfqxTJbUnS-IOOqOB4_45hCedSMe"
     },
     {
       "sku": "MI-01094",
@@ -162,9 +162,9 @@
       "qty": 5760,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ybugrg61BJpjJpyCtVELYXociYwAxoNf=w400",
+      "fileId": "1ybugrg61BJpjJpyCtVELYXociYwAxoNf"
     },
     {
       "sku": "MI-01095",
@@ -173,9 +173,9 @@
       "qty": 5184,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1X2GjrlVOTO4tkU5Ho3f5VNNTuDEHM2RD=w400",
+      "fileId": "1X2GjrlVOTO4tkU5Ho3f5VNNTuDEHM2RD"
     },
     {
       "sku": "MI-01096",
@@ -184,9 +184,9 @@
       "qty": 5616,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1DbeMt9kBekx4P6B0hzXoF_se1sUbZ3XG=w400",
+      "fileId": "1DbeMt9kBekx4P6B0hzXoF_se1sUbZ3XG"
     },
     {
       "sku": "MI-01097",
@@ -195,9 +195,9 @@
       "qty": 5688,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1vZxECJiQfe0u-Qk6fyFIHU3294XWSBUb=w400",
+      "fileId": "1vZxECJiQfe0u-Qk6fyFIHU3294XWSBUb"
     },
     {
       "sku": "MI-01098",
@@ -206,9 +206,9 @@
       "qty": 5256,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1LfBFlsyY2eSIo-_PGdZ9bI6xD6IdB04B=w400",
+      "fileId": "1LfBFlsyY2eSIo-_PGdZ9bI6xD6IdB04B"
     },
     {
       "sku": "MI-01099",
@@ -217,9 +217,9 @@
       "qty": 5976,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1YcX4QA37WhhbJysDNXeWhNDstqAAJBrz=w400",
+      "fileId": "1YcX4QA37WhhbJysDNXeWhNDstqAAJBrz"
     },
     {
       "sku": "MI-01101",
@@ -228,9 +228,9 @@
       "qty": 5040,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dMYCm9Nb_uy6aWMLQCJQs7KAJsW8oADv=w400",
+      "fileId": "1dMYCm9Nb_uy6aWMLQCJQs7KAJsW8oADv"
     },
     {
       "sku": "MI-01102",
@@ -239,9 +239,9 @@
       "qty": 5616,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1IHrSbSdRdN3MZff8eplFhwMR_CGQ1JOa=w400",
+      "fileId": "1IHrSbSdRdN3MZff8eplFhwMR_CGQ1JOa"
     },
     {
       "sku": "MI-01103",
@@ -250,9 +250,9 @@
       "qty": 6048,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ZeIpme1dhRAtUxkVuoxslMfJgL3GLDcO=w400",
+      "fileId": "1ZeIpme1dhRAtUxkVuoxslMfJgL3GLDcO"
     },
     {
       "sku": "MI-01112",
@@ -261,9 +261,9 @@
       "qty": 6336,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Tf1VEzaz4XpDSH3LyMre_bPzRYCTsYXV=w400",
+      "fileId": "1Tf1VEzaz4XpDSH3LyMre_bPzRYCTsYXV"
     },
     {
       "sku": "MI-01139",
@@ -272,9 +272,9 @@
       "qty": 1800,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1DsPn1Z6fKDFX7bAs1iZMwh-plt4l5Ge4=w400",
+      "fileId": "1DsPn1Z6fKDFX7bAs1iZMwh-plt4l5Ge4"
     },
     {
       "sku": "MI-01140",
@@ -283,9 +283,9 @@
       "qty": 4140,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/16-bRRDuN-TNUz_ghZQZF1DDuBFgCkCS-=w400",
+      "fileId": "16-bRRDuN-TNUz_ghZQZF1DDuBFgCkCS-"
     },
     {
       "sku": "MI-01141",
@@ -294,9 +294,9 @@
       "qty": 1800,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/17duLkSZgQLVohVrpnahkS3mDG2iVoIUo=w400",
+      "fileId": "17duLkSZgQLVohVrpnahkS3mDG2iVoIUo"
     },
     {
       "sku": "MI-01149",
@@ -305,9 +305,9 @@
       "qty": 1200,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Y7uJ4JuK90Xx6h8ci9uX9Oo7tN5uZx1g=w400",
+      "fileId": "1Y7uJ4JuK90Xx6h8ci9uX9Oo7tN5uZx1g"
     },
     {
       "sku": "MI-01153",
@@ -316,9 +316,9 @@
       "qty": 3360,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/15VdjTirnaB9ucluYVGnlU-iHDzDfY966=w400",
+      "fileId": "15VdjTirnaB9ucluYVGnlU-iHDzDfY966"
     },
     {
       "sku": "MI-01154",
@@ -327,9 +327,9 @@
       "qty": 4320,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1efd1c4AlcgGgufszXUgaDS25MogEax9s=w400",
+      "fileId": "1efd1c4AlcgGgufszXUgaDS25MogEax9s"
     },
     {
       "sku": "MI-01155",
@@ -338,9 +338,9 @@
       "qty": 2640,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1DTUtpne_rMYDoF5MawpSeAtUiX9PzI7e=w400",
+      "fileId": "1DTUtpne_rMYDoF5MawpSeAtUiX9PzI7e"
     },
     {
       "sku": "MI-01157",
@@ -349,9 +349,9 @@
       "qty": 480,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1frbwhoFwlC9BAC_zZusj7dR_LrdQJLgY=w400",
+      "fileId": "1frbwhoFwlC9BAC_zZusj7dR_LrdQJLgY"
     },
     {
       "sku": "MI-01158",
@@ -360,9 +360,9 @@
       "qty": 2880,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1jMEfS5QWvt2mHbb6YrTtPaZlym9KlOiC=w400",
+      "fileId": "1jMEfS5QWvt2mHbb6YrTtPaZlym9KlOiC"
     },
     {
       "sku": "MI-01159",
@@ -371,9 +371,9 @@
       "qty": 3300,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/13aUaB9jHmiX_mb0vIhPNTVJDOWolMKB9=w400",
+      "fileId": "13aUaB9jHmiX_mb0vIhPNTVJDOWolMKB9"
     },
     {
       "sku": "MI-01161",
@@ -382,9 +382,9 @@
       "qty": 4200,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/18Hl5JodFSEWmzeO5p6g260m8-Ttv0rxW=w400",
+      "fileId": "18Hl5JodFSEWmzeO5p6g260m8-Ttv0rxW"
     },
     {
       "sku": "MI-01185",
@@ -393,9 +393,9 @@
       "qty": 4320,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1T4fRWk87whU3j0YKlwwNHbLJxieiXomS=w400",
+      "fileId": "1T4fRWk87whU3j0YKlwwNHbLJxieiXomS"
     },
     {
       "sku": "MI-01199",
@@ -404,9 +404,9 @@
       "qty": 2160,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1KwqIqHcXiTMc2WPDqVgAn_NFK9CtQvWa=w400",
+      "fileId": "1KwqIqHcXiTMc2WPDqVgAn_NFK9CtQvWa"
     },
     {
       "sku": "MI-01201",
@@ -415,9 +415,9 @@
       "qty": 1152,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/11gT0g6gAaQPvBje-EDdE_xTbbs3PStD-=w400",
+      "fileId": "11gT0g6gAaQPvBje-EDdE_xTbbs3PStD-"
     },
     {
       "sku": "MI-01208",
@@ -426,9 +426,9 @@
       "qty": 3120,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1wBad0Qg46N3EEHuU2dyFC7DsqtsA-NmJ=w400",
+      "fileId": "1wBad0Qg46N3EEHuU2dyFC7DsqtsA-NmJ"
     },
     {
       "sku": "MI-01213",
@@ -437,9 +437,9 @@
       "qty": 4320,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dNMOZWdrcrhjiS8l08VV2nLYlLVQS-Od=w400",
+      "fileId": "1dNMOZWdrcrhjiS8l08VV2nLYlLVQS-Od"
     },
     {
       "sku": "MI-01214",
@@ -448,9 +448,9 @@
       "qty": 4224,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/12yCu_etTIYWPU7bRWPCgs3_p8radYYMh=w400",
+      "fileId": "12yCu_etTIYWPU7bRWPCgs3_p8radYYMh"
     },
     {
       "sku": "MI-01215",
@@ -459,9 +459,9 @@
       "qty": 4992,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1RYLk6wopYvNnu2JhaB44wYCG4LaaSCmi=w400",
+      "fileId": "1RYLk6wopYvNnu2JhaB44wYCG4LaaSCmi"
     },
     {
       "sku": "MI-01246",
@@ -470,9 +470,9 @@
       "qty": 144,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1fI4026omDTOXdYxOSYtoulWgRFYlYYco=w400",
+      "fileId": "1fI4026omDTOXdYxOSYtoulWgRFYlYYco"
     },
     {
       "sku": "MI-01249",
@@ -481,9 +481,9 @@
       "qty": 81600,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1R7KbexWpELZR5SJ3CDisd5Qb8pDpQ91O=w400",
+      "fileId": "1R7KbexWpELZR5SJ3CDisd5Qb8pDpQ91O"
     },
     {
       "sku": "MI-01251",
@@ -492,9 +492,9 @@
       "qty": 2304,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dXMNZ1zAGpHvaShhOsdk0D3mmyH1IrB9=w400",
+      "fileId": "1dXMNZ1zAGpHvaShhOsdk0D3mmyH1IrB9"
     },
     {
       "sku": "MI-01286",
@@ -503,9 +503,9 @@
       "qty": 3024,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1SYjEWk188dQVq48HBN6HA3URVAZXZBuX=w400",
+      "fileId": "1SYjEWk188dQVq48HBN6HA3URVAZXZBuX"
     },
     {
       "sku": "MI-01298",
@@ -514,9 +514,9 @@
       "qty": 576,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/15iBdw5JWFLIkJUgvm2Dv2EQCPnyOpHmM=w400",
+      "fileId": "15iBdw5JWFLIkJUgvm2Dv2EQCPnyOpHmM"
     },
     {
       "sku": "MI-01299",
@@ -525,9 +525,9 @@
       "qty": 2880,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1N8urBHk-n1jjbG7CVWLXHF-HcMuPyV3H=w400",
+      "fileId": "1N8urBHk-n1jjbG7CVWLXHF-HcMuPyV3H"
     },
     {
       "sku": "MI-01302",
@@ -536,9 +536,9 @@
       "qty": 2040,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Rc48CzvVG-BLlyanjo0UvTCAo0XLOUu3=w400",
+      "fileId": "1Rc48CzvVG-BLlyanjo0UvTCAo0XLOUu3"
     },
     {
       "sku": "MI-01338",
@@ -547,9 +547,9 @@
       "qty": 3816,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1M-OmUb0deLvB-U2mMX32Z5rA6wYG8DT4=w400",
+      "fileId": "1M-OmUb0deLvB-U2mMX32Z5rA6wYG8DT4"
     },
     {
       "sku": "MI-01340",
@@ -558,9 +558,9 @@
       "qty": 3700,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1TMakKblpLpPi9zb2rZk4QK10taZLuQBx=w400",
+      "fileId": "1TMakKblpLpPi9zb2rZk4QK10taZLuQBx"
     },
     {
       "sku": "MI-01341",
@@ -569,9 +569,9 @@
       "qty": 3350,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1_tCKKInkAObhXGyojigmIXyOECCqsikL=w400",
+      "fileId": "1_tCKKInkAObhXGyojigmIXyOECCqsikL"
     },
     {
       "sku": "MI-01342",
@@ -580,9 +580,9 @@
       "qty": 3300,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1RtScUN_7CwWY2TFt16tNDiJne7eeI7be=w400",
+      "fileId": "1RtScUN_7CwWY2TFt16tNDiJne7eeI7be"
     },
     {
       "sku": "MI-01343",
@@ -591,9 +591,9 @@
       "qty": 3700,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1NszlOfjWLkayz_udpFkrDHsZ4RnVcSPz=w400",
+      "fileId": "1NszlOfjWLkayz_udpFkrDHsZ4RnVcSPz"
     },
     {
       "sku": "MI-01372",
@@ -602,9 +602,9 @@
       "qty": 1920,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1VV959eflR5h0PGz_wZAqyK2P1OQa0PLx=w400",
+      "fileId": "1VV959eflR5h0PGz_wZAqyK2P1OQa0PLx"
     },
     {
       "sku": "MI-01435",
@@ -613,9 +613,9 @@
       "qty": 480,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1QVngKnu1pn0Bi6H6Plun3-D69dfeufWv=w400",
+      "fileId": "1QVngKnu1pn0Bi6H6Plun3-D69dfeufWv"
     },
     {
       "sku": "MI-01442",
@@ -624,9 +624,9 @@
       "qty": 5760,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1qkrgfDne-YPCb7PVVHBBcd2GEkhoO62Z=w400",
+      "fileId": "1qkrgfDne-YPCb7PVVHBBcd2GEkhoO62Z"
     },
     {
       "sku": "MI-01443",
@@ -635,9 +635,9 @@
       "qty": 5688,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1bLu49gBEF6khZdcLRpbIOwqQfv_YOUKX=w400",
+      "fileId": "1bLu49gBEF6khZdcLRpbIOwqQfv_YOUKX"
     },
     {
       "sku": "MI-01444",
@@ -646,9 +646,9 @@
       "qty": 5832,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1acSxM_l5egGQ5mHjtY89iRU4YX2LTc6y=w400",
+      "fileId": "1acSxM_l5egGQ5mHjtY89iRU4YX2LTc6y"
     },
     {
       "sku": "MI-01469",
@@ -657,9 +657,9 @@
       "qty": 480,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1l7o6GDPWHUc3U9539MkdaTWcjooEMQKp=w400",
+      "fileId": "1l7o6GDPWHUc3U9539MkdaTWcjooEMQKp"
     },
     {
       "sku": "MI-01470",
@@ -26280,9 +26280,9 @@
       "qty": 300,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1uEfjp0r8pbFqxQle14B6WHvPl6f25VPZ=w400",
+      "fileId": "1uEfjp0r8pbFqxQle14B6WHvPl6f25VPZ"
     },
     {
       "sku": "MI-00015",
@@ -26291,9 +26291,9 @@
       "qty": 276,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1nGDZBxjLOLhJjlLKVW2KX4W1NTYdnQkt=w400",
+      "fileId": "1nGDZBxjLOLhJjlLKVW2KX4W1NTYdnQkt"
     },
     {
       "sku": "MI-00016",
@@ -26302,9 +26302,9 @@
       "qty": 288,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1wIGwaTKIj3PSXDyrtcEl0-gHV6f4_TfH=w400",
+      "fileId": "1wIGwaTKIj3PSXDyrtcEl0-gHV6f4_TfH"
     },
     {
       "sku": "MI-00017",
@@ -26324,9 +26324,9 @@
       "qty": 288,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1O2fpMBy2uKkoc_fgp-7jm3JYkP5p8-Qr=w400",
+      "fileId": "1O2fpMBy2uKkoc_fgp-7jm3JYkP5p8-Qr"
     },
     {
       "sku": "MI-00019",
@@ -26335,9 +26335,9 @@
       "qty": 252,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dXbsN8Hfk8kj25M0t7PaYw1NS5mmCtkc=w400",
+      "fileId": "1dXbsN8Hfk8kj25M0t7PaYw1NS5mmCtkc"
     },
     {
       "sku": "MI-00021",
@@ -26346,9 +26346,9 @@
       "qty": 180,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1gT1QnIuuUk5C93-yuRZuU1chV4c6nLdV=w400",
+      "fileId": "1gT1QnIuuUk5C93-yuRZuU1chV4c6nLdV"
     },
     {
       "sku": "MI-00023",
@@ -26533,9 +26533,9 @@
       "qty": 215,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1E5YSQKH3DvKonrpsO_951RUG9k4jwkpz=w400",
+      "fileId": "1E5YSQKH3DvKonrpsO_951RUG9k4jwkpz"
     },
     {
       "sku": "MI-00051",
@@ -26544,9 +26544,9 @@
       "qty": 215,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1rd2rLJjgtXKKwDljupC7_cQ9wAVXnzbU=w400",
+      "fileId": "1rd2rLJjgtXKKwDljupC7_cQ9wAVXnzbU"
     },
     {
       "sku": "MI-001",
@@ -26566,9 +26566,9 @@
       "qty": 48,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1tkq17gBfqRUz7FcFh6bG_5gTG_zEmQvO=w400",
+      "fileId": "1tkq17gBfqRUz7FcFh6bG_5gTG_zEmQvO"
     },
     {
       "sku": "MI-0063D",
@@ -26599,9 +26599,9 @@
       "qty": 168,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/15yI4I8T6k-kuBq1YyKGWGRs9_UTNA7hI=w400",
+      "fileId": "15yI4I8T6k-kuBq1YyKGWGRs9_UTNA7hI"
     },
     {
       "sku": "MI-01063",
@@ -26621,9 +26621,9 @@
       "qty": 224,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1FjL08vh3jHE2pLa-hDex1h7YQgP4iSHz=w400",
+      "fileId": "1FjL08vh3jHE2pLa-hDex1h7YQgP4iSHz"
     },
     {
       "sku": "MI-01071",
@@ -26643,9 +26643,9 @@
       "qty": 71,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1LfBFlsyY2eSIo-_PGdZ9bI6xD6IdB04B=w400",
+      "fileId": "1LfBFlsyY2eSIo-_PGdZ9bI6xD6IdB04B"
     },
     {
       "sku": "MI-01102",
@@ -26654,9 +26654,9 @@
       "qty": 71,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1IHrSbSdRdN3MZff8eplFhwMR_CGQ1JOa=w400",
+      "fileId": "1IHrSbSdRdN3MZff8eplFhwMR_CGQ1JOa"
     },
     {
       "sku": "MI-01113",
@@ -26731,9 +26731,9 @@
       "qty": 326,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1DsPn1Z6fKDFX7bAs1iZMwh-plt4l5Ge4=w400",
+      "fileId": "1DsPn1Z6fKDFX7bAs1iZMwh-plt4l5Ge4"
     },
     {
       "sku": "MI-01140",
@@ -26742,9 +26742,9 @@
       "qty": 151,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/16-bRRDuN-TNUz_ghZQZF1DDuBFgCkCS-=w400",
+      "fileId": "16-bRRDuN-TNUz_ghZQZF1DDuBFgCkCS-"
     },
     {
       "sku": "MI-01141",
@@ -26753,9 +26753,9 @@
       "qty": 252,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/17duLkSZgQLVohVrpnahkS3mDG2iVoIUo=w400",
+      "fileId": "17duLkSZgQLVohVrpnahkS3mDG2iVoIUo"
     },
     {
       "sku": "MI-01153",
@@ -26764,9 +26764,9 @@
       "qty": 210,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/15VdjTirnaB9ucluYVGnlU-iHDzDfY966=w400",
+      "fileId": "15VdjTirnaB9ucluYVGnlU-iHDzDfY966"
     },
     {
       "sku": "MI-01154",
@@ -26775,9 +26775,9 @@
       "qty": 202,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1efd1c4AlcgGgufszXUgaDS25MogEax9s=w400",
+      "fileId": "1efd1c4AlcgGgufszXUgaDS25MogEax9s"
     },
     {
       "sku": "MI-01157",
@@ -26786,9 +26786,9 @@
       "qty": 158,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1frbwhoFwlC9BAC_zZusj7dR_LrdQJLgY=w400",
+      "fileId": "1frbwhoFwlC9BAC_zZusj7dR_LrdQJLgY"
     },
     {
       "sku": "MI-01158",
@@ -26797,9 +26797,9 @@
       "qty": 210,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1jMEfS5QWvt2mHbb6YrTtPaZlym9KlOiC=w400",
+      "fileId": "1jMEfS5QWvt2mHbb6YrTtPaZlym9KlOiC"
     },
     {
       "sku": "MI-01159",
@@ -26808,9 +26808,9 @@
       "qty": 260,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/13aUaB9jHmiX_mb0vIhPNTVJDOWolMKB9=w400",
+      "fileId": "13aUaB9jHmiX_mb0vIhPNTVJDOWolMKB9"
     },
     {
       "sku": "MI-01171",
@@ -26863,9 +26863,9 @@
       "qty": 212,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1T4fRWk87whU3j0YKlwwNHbLJxieiXomS=w400",
+      "fileId": "1T4fRWk87whU3j0YKlwwNHbLJxieiXomS"
     },
     {
       "sku": "MI-01199",
@@ -26874,9 +26874,9 @@
       "qty": 215,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1KwqIqHcXiTMc2WPDqVgAn_NFK9CtQvWa=w400",
+      "fileId": "1KwqIqHcXiTMc2WPDqVgAn_NFK9CtQvWa"
     },
     {
       "sku": "MI-01201",
@@ -26885,9 +26885,9 @@
       "qty": 255,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/11gT0g6gAaQPvBje-EDdE_xTbbs3PStD-=w400",
+      "fileId": "11gT0g6gAaQPvBje-EDdE_xTbbs3PStD-"
     },
     {
       "sku": "MI-01203",
@@ -26907,9 +26907,9 @@
       "qty": 210,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1wBad0Qg46N3EEHuU2dyFC7DsqtsA-NmJ=w400",
+      "fileId": "1wBad0Qg46N3EEHuU2dyFC7DsqtsA-NmJ"
     },
     {
       "sku": "MI-01213",
@@ -26918,9 +26918,9 @@
       "qty": 252,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dNMOZWdrcrhjiS8l08VV2nLYlLVQS-Od=w400",
+      "fileId": "1dNMOZWdrcrhjiS8l08VV2nLYlLVQS-Od"
     },
     {
       "sku": "MI-01214",
@@ -26929,9 +26929,9 @@
       "qty": 144,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/12yCu_etTIYWPU7bRWPCgs3_p8radYYMh=w400",
+      "fileId": "12yCu_etTIYWPU7bRWPCgs3_p8radYYMh"
     },
     {
       "sku": "MI-01215",
@@ -26940,9 +26940,9 @@
       "qty": 144,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1RYLk6wopYvNnu2JhaB44wYCG4LaaSCmi=w400",
+      "fileId": "1RYLk6wopYvNnu2JhaB44wYCG4LaaSCmi"
     },
     {
       "sku": "MI-01243",
@@ -27666,9 +27666,9 @@
       "qty": 66,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1acSxM_l5egGQ5mHjtY89iRU4YX2LTc6y=w400",
+      "fileId": "1acSxM_l5egGQ5mHjtY89iRU4YX2LTc6y"
     },
     {
       "sku": "MI-01446",
@@ -27776,9 +27776,9 @@
       "qty": 228,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1l7o6GDPWHUc3U9539MkdaTWcjooEMQKp=w400",
+      "fileId": "1l7o6GDPWHUc3U9539MkdaTWcjooEMQKp"
     },
     {
       "sku": "MI-01470",
