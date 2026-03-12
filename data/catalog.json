@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T09:29:20.009Z",
+  "updatedAt": "2026-03-12T09:35:28.645Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -31791,6 +31791,17 @@
       "fileId": "1Eis6avISPJNkIOJD7EUOe_A8avYek1Fy"
     },
     {
+      "sku": "KM-SB001",
+      "name": "KM-SB001",
+      "price": 0,
+      "qty": 24,
+      "inStock": true,
+      "category": "ไม่ระบุ",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/19G4OhluMSz5UvrUvx3KLYsDJ-qVcvFKp=w400",
+      "fileId": "19G4OhluMSz5UvrUvx3KLYsDJ-qVcvFKp"
+    },
+    {
       "sku": "KM-SC110-10",
       "name": "KM-SC110-10",
       "price": 0,
@@ -33274,17 +33285,6 @@
       "hasImage": true,
       "imageUrl": "https://lh3.googleusercontent.com/d/1s0U8XGpQmh2uZFbH34_Ywbrt7x4Op-LB=w400",
       "fileId": "1s0U8XGpQmh2uZFbH34_Ywbrt7x4Op-LB"
-    },
-    {
-      "sku": "MI-01255",
-      "name": "MI-01255",
-      "price": 0,
-      "qty": 165,
-      "inStock": true,
-      "category": "ไม่ระบุ",
-      "hasImage": true,
-      "imageUrl": "https://lh3.googleusercontent.com/d/1xkgXUsM8LPH5tkVwcbOvPUeuuQORnA5K=w400",
-      "fileId": "1xkgXUsM8LPH5tkVwcbOvPUeuuQORnA5K"
     },
     {
       "sku": "MI-01259",
