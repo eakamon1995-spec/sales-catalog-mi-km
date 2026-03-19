@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-19T19:18:32.545Z",
+  "updatedAt": "2026-03-19T19:23:03.190Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -9808,9 +9808,9 @@
       "qty": 1584,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1gEP5TBKwNVGxusDCyyAyMPPEH6oPhRGZ=w400",
+      "fileId": "1gEP5TBKwNVGxusDCyyAyMPPEH6oPhRGZ",
       "unitsPerBox": 264,
       "boxQty": 3,
       "dateAdded": ""
@@ -11223,8 +11223,8 @@
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": true,
-      "imageUrl": "https://lh3.googleusercontent.com/d/1h5gy7NyC05Izb6X4AY2BuKA1tjgLHvXM=w400",
-      "fileId": "1h5gy7NyC05Izb6X4AY2BuKA1tjgLHvXM",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1A_QvZ1LMXFC1qa8wN49bOsOqBnrU6Tkd=w400",
+      "fileId": "1A_QvZ1LMXFC1qa8wN49bOsOqBnrU6Tkd",
       "unitsPerBox": 360,
       "boxQty": 6,
       "dateAdded": ""
