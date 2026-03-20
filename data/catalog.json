@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-20T00:07:04.817Z",
+  "updatedAt": "2026-03-20T02:58:16.742Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -12734,9 +12734,9 @@
       "qty": 2880,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1alNmK_ZVy8EEpGWmW08VlKqMPvIsvsQ1=w400",
+      "fileId": "1alNmK_ZVy8EEpGWmW08VlKqMPvIsvsQ1",
       "unitsPerBox": 360,
       "boxQty": 4,
       "dateAdded": ""
@@ -13444,7 +13444,7 @@
     {
       "sku": "MI-02437",
       "name": "[240] เข็มกลัดติดเสื้อไว้อาลัยสีดำ 2.6*2.1ซม. MI-02437",
-      "price": 0,
+      "price": 8,
       "qty": 47520,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -13458,7 +13458,7 @@
     {
       "sku": "MI-02437#1",
       "name": "[360] เข็มกลัดติดเสื้อไว้อาลัยสีดำ 2.6*2.1ซม. MI-02437#1",
-      "price": 0,
+      "price": 8,
       "qty": 35280,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -13472,7 +13472,7 @@
     {
       "sku": "MI-02437#2",
       "name": "[360] เข็มกลัดติดเสื้อไว้อาลัยสีดำ 2.6*2.1ซม. MI-02437#2",
-      "price": 0,
+      "price": 8,
       "qty": 32400,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -20294,9 +20294,9 @@
       "qty": 4320,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1UmVLi9DbTcz64cfnkHRpUucHOjABIful=w400",
+      "fileId": "1UmVLi9DbTcz64cfnkHRpUucHOjABIful",
       "unitsPerBox": 240,
       "boxQty": 9,
       "dateAdded": ""
@@ -20518,9 +20518,9 @@
       "qty": 672,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1KYqZVMEKGKWo9-KU-wpLK5rSwISP3iu_=w400",
+      "fileId": "1KYqZVMEKGKWo9-KU-wpLK5rSwISP3iu_",
       "unitsPerBox": 168,
       "boxQty": 2,
       "dateAdded": ""
@@ -20728,9 +20728,9 @@
       "qty": 33600,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Z41ZbqF4HPvxN6byo1qbOAlAvDSMFiPN=w400",
+      "fileId": "1Z41ZbqF4HPvxN6byo1qbOAlAvDSMFiPN",
       "unitsPerBox": 480,
       "boxQty": 35,
       "dateAdded": ""
@@ -23201,14 +23201,17 @@
     },
     {
       "sku": "บ93324",
-      "name": "บ93324",
+      "name": "[120] ปืนฉีดน้ำ 31 ซม.  บ93324",
       "price": 0,
       "qty": 480,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": false,
       "imageUrl": "",
-      "fileId": ""
+      "fileId": "",
+      "unitsPerBox": 120,
+      "boxQty": 4,
+      "dateAdded": ""
     },
     {
       "sku": "บ93331",
@@ -27130,9 +27133,9 @@
       "qty": 5760,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1b1U0k2mn7IlpfZm7WLtQf6WGHc1_UQ8p=w400",
+      "fileId": "1b1U0k2mn7IlpfZm7WLtQf6WGHc1_UQ8p",
       "unitsPerBox": 240,
       "boxQty": 24,
       "dateAdded": ""
@@ -27209,14 +27212,17 @@
     },
     {
       "sku": "KSS601",
-      "name": "KSS601",
-      "price": 0,
+      "name": "[144] ที่ใส่เครื่องเทศสแตนเลส 5x8 ซม. KSS601",
+      "price": 12,
       "qty": 1584,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": ""
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/10mxG4x62vZ5pHLqU5vg7FR_ulrMUDSMs=w400",
+      "fileId": "10mxG4x62vZ5pHLqU5vg7FR_ulrMUDSMs",
+      "unitsPerBox": 144,
+      "boxQty": 11,
+      "dateAdded": ""
     },
     {
       "sku": "KSU403",
@@ -35466,7 +35472,7 @@
     {
       "sku": "MI-02437#2",
       "name": "[360] เข็มกลัดติดเสื้อไว้อาลัยสีดำ 2.6*2.1ซม. MI-02437#2",
-      "price": 0,
+      "price": 8,
       "qty": 110,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -43418,7 +43424,7 @@
     {
       "sku": "MI-551C",
       "name": "[144] คลิปหนีบกระดาษ 5PCS 51MM คละสี MI-551C",
-      "price": 0,
+      "price": 12.5,
       "qty": 108,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -43865,7 +43871,7 @@
     },
     {
       "sku": "MI-BALL-25#1",
-      "name": "[48] ลูกบอลคละสี 25 ลูกถุงตาข่าย MI-BALL-25#1",
+      "name": "MI-BALL-25#1",
       "price": 0,
       "qty": 23,
       "inStock": true,
@@ -43873,7 +43879,7 @@
       "hasImage": false,
       "imageUrl": "",
       "fileId": "",
-      "unitsPerBox": 48,
+      "unitsPerBox": 0,
       "boxQty": 0,
       "dateAdded": ""
     },
@@ -44034,7 +44040,7 @@
     {
       "sku": "MI-SR-Z0",
       "name": "[240] ใบคัตเตอร์ 5 ใบ MI-SR-Z0",
-      "price": 0,
+      "price": 12.5,
       "qty": 60,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -44048,7 +44054,7 @@
     {
       "sku": "MI-SR-Z11",
       "name": "[480] ชุดกระดุม MI-SR-Z11",
-      "price": 0,
+      "price": 12.5,
       "qty": 168,
       "inStock": true,
       "category": "ไม่ระบุ",
@@ -44299,14 +44305,17 @@
     },
     {
       "sku": "บ93324",
-      "name": "บ93324",
+      "name": "[120] ปืนฉีดน้ำ 31 ซม.  บ93324",
       "price": 0,
       "qty": 7,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": false,
       "imageUrl": "",
-      "fileId": ""
+      "fileId": "",
+      "unitsPerBox": 120,
+      "boxQty": 4,
+      "dateAdded": ""
     },
     {
       "sku": "บ93331",
