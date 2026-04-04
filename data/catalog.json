@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-04T09:47:42.532Z",
+  "updatedAt": "2026-04-04T10:09:38.722Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -21840,14 +21840,17 @@
     },
     {
       "sku": "MI-88062",
-      "name": "MI-88062",
-      "price": 0,
+      "name": "[240] แว่นตากันน้ำสงกรานต์ คละสี MI-88062",
+      "price": 8.5,
       "qty": 8160,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": true,
       "imageUrl": "https://lh3.googleusercontent.com/d/172DTE1fuQV6kjyoHr5J0ulb7L0wqa9wI=w400",
-      "fileId": "172DTE1fuQV6kjyoHr5J0ulb7L0wqa9wI"
+      "fileId": "172DTE1fuQV6kjyoHr5J0ulb7L0wqa9wI",
+      "unitsPerBox": 240,
+      "boxQty": 17,
+      "dateAdded": ""
     },
     {
       "sku": "MI-88067",
@@ -42772,14 +42775,17 @@
     },
     {
       "sku": "MI-88062",
-      "name": "MI-88062",
-      "price": 0,
+      "name": "[240] แว่นตากันน้ำสงกรานต์ คละสี MI-88062",
+      "price": 8.5,
       "qty": 210,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": true,
       "imageUrl": "https://lh3.googleusercontent.com/d/13lIBti49WGvVZiT2gbvAJHuO_FJiDfEj=w400",
-      "fileId": "13lIBti49WGvVZiT2gbvAJHuO_FJiDfEj"
+      "fileId": "13lIBti49WGvVZiT2gbvAJHuO_FJiDfEj",
+      "unitsPerBox": 240,
+      "boxQty": 17,
+      "dateAdded": ""
     },
     {
       "sku": "MI-88063",
