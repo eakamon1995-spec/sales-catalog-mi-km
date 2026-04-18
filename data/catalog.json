@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-17T09:48:09.035Z",
+  "updatedAt": "2026-04-18T01:33:37.404Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -153,7 +153,7 @@
       "fileId": "18h6yO37zTzQ0PnPRFUQdoEcjLe0kfmVB",
       "unitsPerBox": 72,
       "boxQty": 50,
-      "dateAdded": "2026-04-02T07:00:00.000Z"
+      "dateAdded": ""
     },
     {
       "sku": "MI-01047",
@@ -167,7 +167,7 @@
       "fileId": "1ufZRqUQI23ngsjIEjYJ4nzLl4OzV1Z-k",
       "unitsPerBox": 72,
       "boxQty": 47,
-      "dateAdded": "2026-04-02T07:00:00.000Z"
+      "dateAdded": ""
     },
     {
       "sku": "MI-01048",
@@ -181,7 +181,7 @@
       "fileId": "186t52R7OSe-HQspbMeoz8K8CPU2xHK8u",
       "unitsPerBox": 72,
       "boxQty": 62,
-      "dateAdded": "2026-04-02T07:00:00.000Z"
+      "dateAdded": ""
     },
     {
       "sku": "MI-01049",
@@ -195,7 +195,7 @@
       "fileId": "1zdGZf9aUvlmS0Xu-w-o6UvPjLpdbUuv-",
       "unitsPerBox": 72,
       "boxQty": 51,
-      "dateAdded": "2026-04-02T07:00:00.000Z"
+      "dateAdded": ""
     },
     {
       "sku": "MI-01060",
@@ -16075,14 +16075,17 @@
     },
     {
       "sku": "MI-05301",
-      "name": "MI-05301",
-      "price": 0,
+      "name": "[70] แก้วพร้อมปลอกลายการ์ตูน 320 มล. MI-05301",
+      "price": 12.5,
       "qty": 3080,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": true,
       "imageUrl": "https://lh3.googleusercontent.com/d/1KHHA4yymLe6mFYtGNlUrEkG7DZjWMqp2=w400",
-      "fileId": "1KHHA4yymLe6mFYtGNlUrEkG7DZjWMqp2"
+      "fileId": "1KHHA4yymLe6mFYtGNlUrEkG7DZjWMqp2",
+      "unitsPerBox": 70,
+      "boxQty": 22,
+      "dateAdded": ""
     },
     {
       "sku": "MI-05304",
