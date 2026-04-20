@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-20T17:59:20.009Z",
+  "updatedAt": "2026-04-20T18:04:10.749Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -21381,14 +21381,17 @@
     },
     {
       "sku": "MI-RD001#1",
-      "name": "MI-RD001#1",
-      "price": 0,
+      "name": "[120] ขันน้ำพลาสติกเกรดA 8 นิ้ว คละสี MI-RD001",
+      "price": 8,
       "qty": 144,
       "inStock": true,
       "category": "ไม่ระบุ",
       "hasImage": false,
       "imageUrl": "",
-      "fileId": ""
+      "fileId": "",
+      "unitsPerBox": 120,
+      "boxQty": 0,
+      "dateAdded": ""
     },
     {
       "sku": "MI-RD007",
