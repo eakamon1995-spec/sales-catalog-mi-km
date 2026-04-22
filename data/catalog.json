@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22T14:45:12.600Z",
+  "updatedAt": "2026-04-22T15:21:07.413Z",
   "MI": [
     {
       "sku": "MI-00012",
@@ -26317,9 +26317,9 @@
       "qty": 1872,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1lrsB_LY5XGIX5penlMjsIygF44O4A0pf=w400",
+      "fileId": "1lrsB_LY5XGIX5penlMjsIygF44O4A0pf",
       "unitsPerBox": 144,
       "boxQty": 13,
       "dateAdded": "2026-04-02T07:00:00.000Z"
@@ -26331,9 +26331,9 @@
       "qty": 600,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1NzQf-89_kC8Nqe-HhJzYbS674rCg4fUE=w400",
+      "fileId": "1NzQf-89_kC8Nqe-HhJzYbS674rCg4fUE",
       "unitsPerBox": 60,
       "boxQty": 10,
       "dateAdded": "2026-04-02T07:00:00.000Z"
@@ -29355,9 +29355,9 @@
       "qty": 5472,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1OHsMry7RzBrLSwk1lxkj3Q8mEXfupyfH=w400",
+      "fileId": "1OHsMry7RzBrLSwk1lxkj3Q8mEXfupyfH",
       "unitsPerBox": 288,
       "boxQty": 19,
       "dateAdded": ""
@@ -31219,9 +31219,9 @@
       "qty": 131,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1lrsB_LY5XGIX5penlMjsIygF44O4A0pf=w400",
+      "fileId": "1lrsB_LY5XGIX5penlMjsIygF44O4A0pf",
       "unitsPerBox": 144,
       "boxQty": 13,
       "dateAdded": "2026-04-02T07:00:00.000Z"
@@ -31233,9 +31233,9 @@
       "qty": 47,
       "inStock": true,
       "category": "ไม่ระบุ",
-      "hasImage": false,
-      "imageUrl": "",
-      "fileId": "",
+      "hasImage": true,
+      "imageUrl": "https://lh3.googleusercontent.com/d/1NzQf-89_kC8Nqe-HhJzYbS674rCg4fUE=w400",
+      "fileId": "1NzQf-89_kC8Nqe-HhJzYbS674rCg4fUE",
       "unitsPerBox": 60,
       "boxQty": 10,
       "dateAdded": "2026-04-02T07:00:00.000Z"
